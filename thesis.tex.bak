@@ -61,8 +61,10 @@
 \setaddress{Längenfeldgasse 28/8/5, 1120 Wien}
 \setregnumber{1326526}
 \setdate{10}{07}{2016} % Set date with 3 arguments: {day}{month}{year}.
-\settitle{Comparison and Implementation of LOD Frameworks}{Comparison and Implementation of LOD Frameworks} % Sets English and German version of the title (both can be English or German).
-\setsubtitle{Finding evaluation and application of implicit existing best practise frameworks}{Finding evaluation and application of implicit existing best practise frameworks} % Sets English and German version of the subtitle (both can be English or German).
+\settitle{\thesistitle}{Comparison and Implementation of LOD Frameworks} % Sets English and German version of the title (both can be English or German).
+\setsubtitle{Optional Subtitle of the Thesis}{Optionaler Untertitel der Arbeit} % Sets English and German version of the subtitle (both can be English or German).
+
+{Finding, evaluation and application of (implicit) existing best practise frameworks}
 
 % Select the thesis type: bachelor / master / doctor / phd-school.
 % Bachelor:
