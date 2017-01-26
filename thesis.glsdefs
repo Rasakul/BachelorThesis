@@ -1,0 +1,180 @@
+\ifglsentryexists{ld}{}%
+{%
+\gls@defglossaryentry{ld}%
+{%
+name={LD},%
+sort={LD},%
+type={acronym},%
+first={Linked Data\glsspace (LD)},%
+firstplural={Linked Datas\glsspace (LDs)},%
+text={LD},%
+plural={LDs},%
+description={Linked Data},%
+descriptionplural={Linked Data\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Linked Data},%
+longplural={Linked Datas},%
+short={LD},%
+shortplural={LDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{od}{}%
+{%
+\gls@defglossaryentry{od}%
+{%
+name={OD},%
+sort={OD},%
+type={acronym},%
+first={Open Data\glsspace (OD)},%
+firstplural={Open Datas\glsspace (ODs)},%
+text={OD},%
+plural={ODs},%
+description={Open Data},%
+descriptionplural={Open Data\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Open Data},%
+longplural={Open Datas},%
+short={OD},%
+shortplural={ODs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{lod}{}%
+{%
+\gls@defglossaryentry{lod}%
+{%
+name={LOD},%
+sort={LOD},%
+type={acronym},%
+first={Linked Open Data\glsspace (LOD)},%
+firstplural={Linked Open Datas\glsspace (LODs)},%
+text={LOD},%
+plural={LODs},%
+description={Linked Open Data},%
+descriptionplural={Linked Open Data\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Linked Open Data},%
+longplural={Linked Open Datas},%
+short={LOD},%
+shortplural={LODs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{euclid}{}%
+{%
+\gls@defglossaryentry{euclid}%
+{%
+name={EUCLID},%
+sort={EUCLID},%
+type={acronym},%
+first={EdUcational Curriculum for the usage of Linked Data\glsspace (EUCLID)},%
+firstplural={EdUcational Curriculum for the usage of Linked Datas\glsspace (EUCLIDs)},%
+text={EUCLID},%
+plural={EUCLIDs},%
+description={EdUcational Curriculum for the usage of Linked Data},%
+descriptionplural={EdUcational Curriculum for the usage of Linked Data\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={EdUcational Curriculum for the usage of Linked Data},%
+longplural={EdUcational Curriculum for the usage of Linked Datas},%
+short={EUCLID},%
+shortplural={EUCLIDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{lucero}{}%
+{%
+\gls@defglossaryentry{lucero}%
+{%
+name={LUCERO},%
+sort={LUCERO},%
+type={acronym},%
+first={Linking University Content for Education and Research Online\glsspace (LUCERO)},%
+firstplural={Linking University Content for Education and Research Onlines\glsspace (LUCEROs)},%
+text={LUCERO},%
+plural={LUCEROs},%
+description={Linking University Content for Education and Research Online},%
+descriptionplural={Linking University Content for Education and Research Online\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Linking University Content for Education and Research Online},%
+longplural={Linking University Content for Education and Research Onlines},%
+short={LUCERO},%
+shortplural={LUCEROs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ldif}{}%
+{%
+\gls@defglossaryentry{ldif}%
+{%
+name={LDIF},%
+sort={LDIF},%
+type={acronym},%
+first={Linked Data Integration Framework\glsspace (LDIF)},%
+firstplural={Linked Data Integration Frameworks\glsspace (LDIFs)},%
+text={LDIF},%
+plural={LDIFs},%
+description={Linked Data Integration Framework},%
+descriptionplural={Linked Data Integration Framework\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Linked Data Integration Framework},%
+longplural={Linked Data Integration Frameworks},%
+short={LDIF},%
+shortplural={LDIFs},%
+counter={page},%
+parent={},%
+%
+}%
+}%

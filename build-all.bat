@@ -1,11 +1,22 @@
 rem Copyright (C) 2014-2016 by Thomas Auzinger <thomas@auzinger.name>
 
 @echo off
-rem Replace the 'x' in the next line with the name of the thesis' main LaTeX document without the '.tex' extension
-set SOURCE=thesis
+set CLASS=vutinfth
+set SOURCE=example
 @echo on
 
-rem Build the thesis document
+rem Build vutinfth documentation
+pdflatex %CLASS%.dtx
+pdflatex %CLASS%.dtx
+makeindex -s gglo.ist -o %CLASS%.gls %CLASS%.glo
+makeindex -s gind.ist -o %CLASS%.ind %CLASS%.idx
+pdflatex %CLASS%.dtx
+pdflatex %CLASS%.dtx
+
+rem Build the vutinfth class file
+pdflatex %CLASS%.ins
+
+rem Build the vutinfth example document
 pdflatex %SOURCE%
 bibtex   %SOURCE%
 pdflatex %SOURCE%
@@ -19,5 +30,5 @@ pdflatex %SOURCE%
 @echo off
 echo.
 echo.
-echo Thesis document compiled.
+echo Class file and example document compiled.
 pause

@@ -29,7 +29,7 @@
 %% Copyright (C) 2014-2016 by Thomas Auzinger <thomas@auzinger.name>
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{vutinfth}
-    [2016/01/17 v1.5 TU Wien Faculty of Informatics thesis template]
+    [2016/11/12 v1.6 TU Wien Faculty of Informatics thesis template]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -388,7 +388,8 @@
   english=Advisor,
   naustrian=Betreuung]{Advisor}%
 \CreatePolylingual[
-  english=Second advisor]{Secondadvisor}%
+  english=Second advisor,
+  naustrian=Zweitbetreuung]{Secondadvisor}%
 \CreatePolylingual[
   english=submitted in partial fulfillment of the requirements
     for the degree of,
@@ -622,13 +623,11 @@
       \vutinfth@normalsize
       \vutinfth@polylingual@Advisor:
       \vutinfth@person@advisor@fullname
-      \ifphd{%
-        \ifdef{\vutinfth@person@secondadvisor@def}{%
-          \\
-          \vutinfth@polylingual@Secondadvisor:
-          \vutinfth@person@secondadvisor@fullname
-        }{}%
-      }%
+      \ifdef{\vutinfth@person@secondadvisor@def}{%
+        \\
+        \vutinfth@polylingual@Secondadvisor:
+        \vutinfth@person@secondadvisor@fullname
+      }{}%
     \end{minipage}\par%
   }%
 }%

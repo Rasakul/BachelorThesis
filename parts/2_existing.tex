@@ -1,21 +1,155 @@
-\chapter{State of the art (RQ1)}
-\todo{Enter your text here.}
+\chapter{State Of The Art (RQ1)}
+
+In order to compare frameworks an understanding of existing frameworks is necessary. This section will look at existing frameworks, what kind of frameworks they are, which of them can be used for this paper and which must be excluded. Furthermore, this section aims to understand how frameworks look like and will examine the architecture of them.
+
+\section{Architectures Of Frameworks}
+
+In this subsection the paper will look into three proposed models how frameworks (and/or implemented LD-applications) should look like. There are many other existing architectures and ongoing projects exposing data as Linked (Open) Data, this paper will use the following as representation of them.
+
+\newacronym{euclid}{EUCLID}{EdUcational Curriculum for the usage of Linked Data}
+\subsection{Euclid Project}\index{Architectures!Euclid Project}
+
+\begin{figure}[h]
+	\centering
+\includegraphics[width=0.5\textwidth]{img/euclid_logo.png}
+\end{figure}
+
+The EUCLID project~\footnote{~\cite{euclid:home}}(EdUcational Curriculum for the usage of Linked Data) was founded under the \emph{Seventh Framework Programme of Research and Technological Development}, a funding program of the European Union/European Commission for 2007-2013~\footnote{~\cite{eu:fp7}}\footnote{EUCLID in the CORDIS database: \url{http://cordis.europa.eu/project/rcn/103709_en.html}}.
+
+Aim of the project was (and still is) to gather existing knowledge and expertise of \emph{"researchers, technology enthusiasts and early adopters in various European Member States"} and provide that accumulated as educational resources to enable the  full benefit of L(O)D for European businesses. The project built upon a consortium experienced in \emph{"over 20 LD projects with over 40 companies and public offices in more than 10 countries"}~\cite{euclid:about}
+
+The outcome of this project is a a range of learning materials, fragmented into modules, and eLearning distribution channels. Overall there are six modules:
+
+\begin{enumerate}
+	\item \textbf{Introduction and Application Scenarios}
+	The introduction provides the knowledge to understand, \emph{what} Linked Data are, the main principles, the standards and the required technologies. Further, an overview how to publish and to consume the data is given.
+	\item \textbf{Querying Linked Data}
+	This chapter mainly describes SPARQL and how to use it for querying and updating.
+	\item \textbf{Providing Linked Data}
+	This module deals with the production and exposure of Linked data, using the tools as R2RML (for relational databases), Open Refine (for spreadsheets), GATECloud (for natural language) and Silk (for interlinkage between datasets, see section~\ref{silk} for details about this tool)
+	\item \textbf{Interaction with Linked Data}
+	The projects describes in this chapter, how to explore Linked Data, using visualization tools, semantic browsers and applications, introducing search options like faceted search, concept-based search and hybrid search.
+	\item \textbf{Creating Linked Data Applications}
+	This module describes how to build a Linked Data Application, which technologies to use and how to integrate common Web APIs.
+	\item \textbf{Scaling up}
+	Finally this chapter examines the main issues of scalability regarding Linked Open Data and describes the relationship to Big Data.
+\end{enumerate}
+
+For this paper module 3 and 5~\footnote{~\cite{euclid:chap5}} are the most interesting. Module 3 describes some useful technologies for various steps on the way of exposing L(O)D, but module 5 introduce a high level architecture and some patterns, how a L(O)D application might look like (see ~\cite{euclid:chap5} for details). In detail, they provide a three-tier architecture (see figure~\ref{euclid_architecture} and three architecture patterns.
+
+\begin{figure}[ht]
+	\centering
+\includegraphics[width=1\textwidth]{img/euclid_architecture.png}
+	\caption{General EUCLID architecture}
+	\label{euclid_architecture}
+\end{figure}
+
+The architecture is very generic and consists of the classic three tiers: presentation, logic and data, each independent to the overlaying tier. Since the presentation and logic layer does not concern the actual publishing of the data, the data layer is the interesting one here. The layer consists of the \emph{Data Access Component}, which represents the access to different data types like relational data or other Web APIs and transforms the data to RDF, the \emph{Data Integration Component}, which does the vocabulary mapping and interlinking for the cleansing in order to e.g. identify and fix ambiguities in resource names, and finally the \emph{Triple Store}, holding the integrated dataset for exposing it to the web.
+
+The mentioned patterns to use for implementations are:
+
+\begin{itemize}
+\item \textbf{Crawling pattern}
+Used for loading the data in advance and storing them in a triple store, increasing the efficiency of data access. In exchange, the data might not be up to date when accessed
+\item \textbf{On-The-Fly Dereferencing Pattern}
+Meaning that the URIs are dereferenced when the application need to access the data. This pattern provides up to date data but for the cost of performance when dereference many URIs.
+\item \textbf{(Federated) Query Pattern}
+Describing the use of complex queries on a fix set of data sources, enabling to work with current data directly retrieved from the sources. The pattern offers an access up-to-date data with adequate response time in specific situations but for the cost of the complex problem to find optimal queries.
+\end{itemize}
+
+\newacronym{lucero}{LUCERO}{Linking University Content for Education and Research Online}
+\subsection{LUCERO}\index{Architectures!LUCERO}
+
+%\begin{figure}[ht]
+%	\centering
+%\includegraphics[width=0.15\textwidth]{img/lucero_logo.png}
+%\end{figure}
+
+The LUCERO project ("Linking University Content for Education and Research Online")~\footnote{The code is available in the Google Code Archive: \url{https://code.google.com/archive/p/luceroproject/wikis/StepByStepDocumentation.wiki}} was a project at the Open University, aiming to \emph{"scope, prototype, pilot and evaluate reusable, cost-effective solutions relying on the linked dataprinciples and technologies for exposing and connecting educational and research content"}. It was founded for one year by the JISC Information Environment 2011 Programme under the call Deposit of research outputs and Exposing digital content for education and research.~\cite{lucero:about}
+
+The projects connected with other organizations through LinkedUniversities.org~\footnote{\url{http://linkeduniversities.org/}} to gather common issues and practices. The outcome was the first university linked data platform,~\url{http://data.open.ac.uk/}, with a lot of impact on The Open University and the education community.
+
+\begin{figure}[ht]
+	\centering
+\includegraphics[width=\textwidth]{img/lucero_architecture.png}
+	\caption{LUCERO work flow \& architecture}
+	\label{lucero_architecture}
+\end{figure}
+
+Looking at the architecture in figure~\ref{lucero_architecture} comparing to the Euclid architecture seen in the previous section, there are quite a lot of similarities. Both have components for accessing different kinds of data, here called \emph{Extractors}, for cleaning the data, here called \emph{Cleaner}, and a Triple Store, holding the data available. The lanes "Collect", "Extract", "Link" and "Store" can be seen as the data layer from the classic three-tier architecture, the "Expose" lane as the logic and presentation layer. 
+
+Both using the crawling pattern to extract, map and store the data in a Linked Data format instead of transforming them for every request.
+
+\subsubsection{TABLOID}\index{Tools!TABLOID}
+One of the outcomes next to the LOD application itself was the Tabloid ("Toolkit ABout Linked Open Institutional Data"), \emph{"a toolkit intended to help institutions and developers to both publish and consume linked data"}. It contains work-flows, documentations, examples and tools~\cite{lucero:tabloid} trying to address different roles such as managers, developers and users. Tabloid try to help people to understand LD, what can be done with it and give advice on a technical perspective, how to publish and consume LD, providing at the same time a detailed and generic way.
+
+\subsection{Linked Data: Evolving the Web into a Global Data Space (Heath, Bizer)}\index{Architectures!Linked Data Book}
+
+Another big effort ampng many others of describing LD in general, how to publish and consume them and how to implement applications was done by the so called "Linked Data book" by Heath and Bizer~\cite{heath2011linked}, which received a lot of attention.
+
+The book aims in general to give a basic understanding of LD and describing publication and consumption of LD. They providing advices and best practices, including architectures approaches, identifying the right set of URIs and vocabulary and much more. They also described an architecture, to be seen in figure~\ref{ld_architecture}
+
+\begin{figure}[ht]
+	\centering
+\includegraphics[width=\textwidth]{img/ld_architecture.png}
+	\caption{Linked Data Publishing Options and Workflows according to the LD book}
+	\label{ld_architecture}
+\end{figure}
+
+Next to patterns they also provide a general workflow for LD publishing, see figure~\ref{ld_architecture}. But comparing to the introduced architectures in the previous sections, the workflow has a different approach: instead of holding the data in a Triple Store, the workflow access and transforms the raw data on-the-fly for every request.
+
+Next to this workflow, the book also provides various "recipes" for publishing LD and one of them is also to hold the data in a triple store as shown by Euclid and LUCERO. Furthermore the book provides a guide for the D2R-Server, which will be described in section~\ref{d2rserver}.
+
 \section{Frameworks}
-\subsection{Euclid Project}\index{Euclid Project!Frameworks}
-\url{http://www.euclid-project.eu/modules/chapter5}
-\subsection{LUCERO}\index{LUCERO!Frameworks}
-\url{https://code.google.com/archive/p/luceroproject/wikis/StepByStepDocumentation.wiki}
-\subsection{LD-Patterns}\index{LD-Patterns!Frameworks}
-\url{http://patterns.dataincubator.org/book/linked-data-patterns.pdf }
-\subsection{Linked Data: Evolving the Web into a Global Data Space (Heath, Bizer)}\index{Linked Data Book!Frameworks}
-\url{http://linkeddatabook.com/editions/1.0/#htoc61}
-\section{All-In-One Solutions}
-\subsection{D2R Server}\index{D2R Server!All-In-One Solutions}
-\url{http://d2rq.org/d2r-server}
-\section{Excluded Tools}\index{LOD2 Stack!Tools}
-\subsection{LOD2 Stack}
-(too general, only stack of technologies)
-\url{http://stack.linkeddata.org/lod2/}
-\subsection{LODUM}\index{LODUM!Other LOD Projects}
-(no public available framework)
+
+\subsection{D2R Server}\index{Framework!D2R Server}~\label{d2rserver}
+The D2R Server was introduced by the Free University of Berlin and is a tool for publishing a non-RDF database as LD interface, supporting RDF browsers, SPARQL clients and normal HTML browsers.~\footnote{\url{http://wifo5-03.informatik.uni-mannheim.de/bizer/d2r-server/publishing/}} By installing and running it, the tool auto-generates an intentional mapping file, which can easily be customized, and then publishes the aimed database to the semantic web.
+
+\begin{figure}[ht]
+	\centering
+\includegraphics[width=\textwidth]{img/d2r_architecture.png}
+	\caption{D2R Server architecture}
+	\label{d2r_architecture}
+\end{figure}
+
+\subsection{Information Workbench}\index{Framework!Information Workbench}
+
+\url{https://www.fluidops.com/en/products/information_workbench/}
+
+\cite{haase2011information}
+
+\begin{figure}[ht]
+	\centering
+\includegraphics[width=0.9\textwidth]{img/information_workbench_architecture.png}
+	\caption{Architecture of the Information Workbench}
+	\label{iw_architecture}
+\end{figure}
+
+\subsection{Synth}\index{Framework!Synth}
+
+\subsection{Silk - The Linked Data Integration Framework}\index{Framework!Silk}\label{silk}
+\url{http://silkframework.org/}
+\cite{volz2009silk}
+\cite{jentzsch2010silk}
+\cite{isele2010silk}
+
+\subsection{LDIF – Linked Data Integration Framework}\index{Framework!LDIF}\newacronym{ldif}{LDIF}{Linked Data Integration Framework}
+\url{http://ldif.wbsg.de/}
+\cite{schultz2011ldif}
+\cite{schultz2012ldif}
+
+\section{Excluded Tools and Projects}
+
+\subsection{LD-Patterns}\index{Framework!LD-Patterns}
+The Linked Data Patterns book by Dodds and Davis (see~\cite{dodds2011linked}) tried to give an overview of existing design pattern regarding LD. But they don't give concrete architectures or architecture relating informations, so this paper will not use its content. But it is suggested, that this design pattern catalogue is used additionally when creating an application.
+
+\subsection{LOD2 Stack}\index{Tools!LOD2 Stack}
+
+The LOD2 stack, introduced by Auer et. al., is \emph{is an integrated distribution of aligned tools which support the whole life cycle of Linked Data from extraction, authoring/creation via enrichment, interlinking, fusing to maintenance.}~\cite{auer2012managing} For this paper the proposed stack of technology was too generic to compare it with other frameworks and the website of the project~\footnote{\url{http://stack.linkeddata.org/lod2//}} was at point of writing this paper offline, therefore it was excluded of this paper.
+
+\subsection{LODUM}\index{Other LOD Projects!LODUM}
+
+Another interesting project is the LODUM project (Linked Open Data University of Münster), the Open Data initiative of the university, hosted at the Institute for Geoinformatics' Semantic Interoperability Lab (MUSIL). The project team has co-initiated both LinkedUniversities.org and LinkedScience.org.
+
+It was excluded for this paper because the project don't provide public documentation of their architecture or any other part of their technical details
 \url{http://lodum.de/}

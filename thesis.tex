@@ -1,6 +1,7 @@
 % Copyright (C) 2014-2016 by Thomas Auzinger <thomas@auzinger.name>
 
 \documentclass[draft,final]{vutinfth} % Remove option 'final' to obtain debug information.
+%\documentclass[draft,final]{vutinfth} % Remove option 'final' to obtain debug information.
 
 % Load packages to allow in- and output of non-ASCII characters.
 \usepackage{lmodern}        % Use an extension of the original Computer Modern font to minimize the use of bitmapped letters.
@@ -8,24 +9,25 @@
 \usepackage[utf8]{inputenc} % Determines encoding of the input. All input files have to use UTF8 encoding.
 
 % Extended LaTeX functionality is enables by including packages with \usepackage{...}.
-\usepackage{fixltx2e}   % Provides fixes for several errors in LaTeX2e.
 \usepackage{amsmath}    % Extended typesetting of mathematical expression.
 \usepackage{amssymb}    % Provides a multitude of mathematical symbols.
 \usepackage{mathtools}  % Further extensions of mathematical typesetting.
 \usepackage{microtype}  % Small-scale typographic enhancements.
-\usepackage{enumitem}   % User control over the layout of lists (itemize, enumerate, description).
+\usepackage[inline]{enumitem} % User control over the layout of lists (itemize, enumerate, description).
 \usepackage{multirow}   % Allows table elements to span several rows.
 \usepackage{booktabs}   % Improves the typesettings of tables.
 \usepackage{subcaption} % Allows the use of subfigures and enables their referencing.
 \usepackage[ruled,linesnumbered,algochapter]{algorithm2e} % Enables the writing of pseudo code.
 \usepackage[usenames,dvipsnames,table]{xcolor} % Allows the definition and use of colors. This package has to be included before tikz.
 \usepackage{nag}       % Issues warnings when best practices in writing LaTeX documents are violated.
+\usepackage{todonotes} % Provides tooltip-like todo notes.
 \usepackage{hyperref}  % Enables cross linking in the electronic document version. This package has to be included second to last.
 \usepackage[acronym,toc]{glossaries} % Enables the generation of glossaries and lists fo acronyms. This package has to be included last.
 
 % Define convenience functions to use the author name and the thesis title in the PDF document properties.
 \newcommand{\authorname}{Lukas Baronyai} % The author name without titles.
 \newcommand{\thesistitle}{Comparison and Implementation of LOD Frameworks} % The title of the thesis. The English version should be used, if it exists.
+\newcommand{\thesissubtitle}{Finding evaluation and application of implicit existing best practice frameworks} % The subtitle of the thesis. The English version should be used, if it exists.
 
 % Set PDF document properties
 \hypersetup{
@@ -37,6 +39,7 @@
     pdfkeywords     = {a, list, of, keywords} % The document's keywords in the document properties (optional).
 }
 
+\setpnumwidth{2.5em}        % Avoid overfull hboxes in the table of contents (see memoir manual).
 \setsecnumdepth{subsection} % Enumerate subsections.
 
 \nonzeroparskip             % Create space between paragraphs (optional).
@@ -60,9 +63,9 @@
 % Required data.
 \setaddress{Längenfeldgasse 28/8/5, 1120 Wien}
 \setregnumber{1326526}
-\setdate{10}{07}{2016} % Set date with 3 arguments: {day}{month}{year}.
+\setdate{\the\day}{\the\month}{\the\year} % Set date with 3 arguments: {day}{month}{year}.
 \settitle{\thesistitle}{\thesistitle} % Sets English and German version of the title (both can be English or German).
-\setsubtitle{Finding evaluation and application of implicit existing best practise frameworks}{Finding evaluation and application of implicit existing best practise frameworks} % Sets English and German version of the subtitle (both can be English or German).
+\setsubtitle{\thesissubtitle}{\thesissubtitle} % Sets English and German version of the subtitle (both can be English or German).
 
 % Select the thesis type: bachelor / master / doctor / phd-school.
 % Bachelor:
@@ -71,9 +74,8 @@
 % For bachelor and master:
 \setcurriculum{Software and Information Engineering}{Software und Information Engineering} % Sets the English and German name of the curriculum.
 
-% Define convenience macros.
-\newcommand{\todo}[1]{{\color{red}\textbf{TODO: {#1}}}} % Comment for the final version, to raise errors.
-
+\usepackage[backend=bibtex,bibencoding=ascii, natbib=true, defernumbers=true, style=ieee]{biblatex}
+\addbibresource{bibliography.bib}
 
 \begin{document}
 
@@ -83,10 +85,14 @@
 
 \addtitlepage{naustrian} % German title page (not for dissertations at the PhD School).
 \addtitlepage{english} % English title page.
-%\addstatementpage %TODO: add
+\addstatementpage
 
-%\input{parts/0_1_acknowledgements.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{parts/0_1_acknowledgements.tex}
 \input{parts/0_2_abstract.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Select the language of the thesis, e.g., english or naustrian.
 \selectlanguage{english}
@@ -97,25 +103,39 @@
 % Switch to arabic numbering and start the enumeration of chapters in the table of content.
 \mainmatter
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%some general acronyms
+\newacronym{ld}{LD}{Linked Data}
+\newacronym{od}{OD}{Open Data}
+\newacronym{lod}{LOD}{Linked Open Data}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \input{parts/1_introduction.tex}
 \input{parts/2_existing.tex}
 \input{parts/3_methodology.tex}
 \input{parts/4_comparison.tex}
-\input{parts/5_implementation.tex}
+%\input{parts/5_implementation.tex}
 \input{parts/6_reflection.tex}
 \input{parts/7_summary.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \backmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Use an optional list of figures.
 \listoffigures % Starred version, i.e., \listoffigures*, removes the toc entry.
 
 % Use an optional list of tables.
+%\cleardoublepage % Start list of tables on the next empty right hand page.
 \listoftables % Starred version, i.e., \listoftables*, removes the toc entry.
 
 % Use an optional list of alogrithms.
-\listofalgorithms
-\addcontentsline{toc}{chapter}{List of Algorithms}
+%\listofalgorithms
+%\addcontentsline{toc}{chapter}{List of Algorithms}
 
 % Add an index.
 \printindex
@@ -123,8 +143,18 @@
 % Add a glossary.
 \printglossaries
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Add a bibliography.
-\bibliographystyle{alpha}
-\bibliography{bibliography}
+%\bibliographystyle{alpha}
+%\bibliography{bibliography}
+
+\addcontentsline{toc}{section}{References}
+
+\printbibliography[title={References to refereed scientific work}, keyword=refsw]
+
+\printbibliography[title={References to non-refereed work}, keyword=nonrefsw]
+
+\printbibliography[title={References to websites}, type=misc]
 
 \end{document}
