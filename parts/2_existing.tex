@@ -1,9 +1,7 @@
 \chapter{State Of The Art (RQ1)}
-
 In order to compare frameworks an understanding of existing frameworks is necessary. This section will look at existing frameworks, what kind of frameworks they are, which of them can be used for this paper and which must be excluded. Furthermore, this section aims to understand how frameworks look like and will examine the architecture of them.
 
 \section{Architectures Of Frameworks}
-
 In this subsection the paper will look into three proposed models how frameworks (and/or implemented LD-applications) should look like. There are many other existing architectures and ongoing projects exposing data as Linked (Open) Data, this paper will use the following as representation of them.
 
 \newacronym{euclid}{EUCLID}{EdUcational Curriculum for the usage of Linked Data}
@@ -12,6 +10,13 @@ In this subsection the paper will look into three proposed models how frameworks
 \begin{figure}[h]
 	\centering
 \includegraphics[width=0.5\textwidth]{img/euclid_logo.png}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+\includegraphics[width=1\textwidth]{img/euclid_architecture.png}
+	\caption{General EUCLID architecture}
+	\label{euclid_architecture}
 \end{figure}
 
 The EUCLID project~\footnote{~\cite{euclid:home}}(EdUcational Curriculum for the usage of Linked Data) was founded under the \emph{Seventh Framework Programme of Research and Technological Development}, a funding program of the European Union/European Commission for 2007-2013~\footnote{~\cite{eu:fp7}}\footnote{EUCLID in the CORDIS database: \url{http://cordis.europa.eu/project/rcn/103709_en.html}}.
@@ -37,13 +42,6 @@ The outcome of this project is a a range of learning materials, fragmented into 
 
 For this paper module 3 and 5~\footnote{~\cite{euclid:chap5}} are the most interesting. Module 3 describes some useful technologies for various steps on the way of exposing L(O)D, but module 5 introduce a high level architecture and some patterns, how a L(O)D application might look like (see ~\cite{euclid:chap5} for details). In detail, they provide a three-tier architecture (see figure~\ref{euclid_architecture} and three architecture patterns.
 
-\begin{figure}[ht]
-	\centering
-\includegraphics[width=1\textwidth]{img/euclid_architecture.png}
-	\caption{General EUCLID architecture}
-	\label{euclid_architecture}
-\end{figure}
-
 The architecture is very generic and consists of the classic three tiers: presentation, logic and data, each independent to the overlaying tier. Since the presentation and logic layer does not concern the actual publishing of the data, the data layer is the interesting one here. The layer consists of the \emph{Data Access Component}, which represents the access to different data types like relational data or other Web APIs and transforms the data to RDF, the \emph{Data Integration Component}, which does the vocabulary mapping and interlinking for the cleansing in order to e.g. identify and fix ambiguities in resource names, and finally the \emph{Triple Store}, holding the integrated dataset for exposing it to the web.
 
 The mentioned patterns to use for implementations are:
@@ -65,16 +63,16 @@ Describing the use of complex queries on a fix set of data sources, enabling to 
 %\includegraphics[width=0.15\textwidth]{img/lucero_logo.png}
 %\end{figure}
 
-The LUCERO project ("Linking University Content for Education and Research Online")~\footnote{The code is available in the Google Code Archive: \url{https://code.google.com/archive/p/luceroproject/wikis/StepByStepDocumentation.wiki}} was a project at the Open University, aiming to \emph{"scope, prototype, pilot and evaluate reusable, cost-effective solutions relying on the linked dataprinciples and technologies for exposing and connecting educational and research content"}. It was founded for one year by the JISC Information Environment 2011 Programme under the call Deposit of research outputs and Exposing digital content for education and research.~\cite{lucero:about}
-
-The projects connected with other organizations through LinkedUniversities.org~\footnote{\url{http://linkeduniversities.org/}} to gather common issues and practices. The outcome was the first university linked data platform,~\url{http://data.open.ac.uk/}, with a lot of impact on The Open University and the education community.
-
 \begin{figure}[ht]
 	\centering
 \includegraphics[width=\textwidth]{img/lucero_architecture.png}
 	\caption{LUCERO work flow \& architecture}
 	\label{lucero_architecture}
 \end{figure}
+
+The LUCERO project ("Linking University Content for Education and Research Online")~\footnote{The code is available in the Google Code Archive: \url{https://code.google.com/archive/p/luceroproject/wikis/StepByStepDocumentation.wiki}} was a project at the Open University, aiming to \emph{"scope, prototype, pilot and evaluate reusable, cost-effective solutions relying on the linked dataprinciples and technologies for exposing and connecting educational and research content"}. It was founded for one year by the JISC Information Environment 2011 Programme under the call Deposit of research outputs and Exposing digital content for education and research.~\cite{lucero:about}
+
+The projects connected with other organizations through LinkedUniversities.org~\footnote{\url{http://linkeduniversities.org/}} to gather common issues and practices. The outcome was the first university linked data platform,~\url{http://data.open.ac.uk/}, with a lot of impact on The Open University and the education community.
 
 Looking at the architecture in figure~\ref{lucero_architecture} comparing to the Euclid architecture seen in the previous section, there are quite a lot of similarities. Both have components for accessing different kinds of data, here called \emph{Extractors}, for cleaning the data, here called \emph{Cleaner}, and a Triple Store, holding the data available. The lanes "Collect", "Extract", "Link" and "Store" can be seen as the data layer from the classic three-tier architecture, the "Expose" lane as the logic and presentation layer. 
 
@@ -83,11 +81,7 @@ Both using the crawling pattern to extract, map and store the data in a Linked D
 \subsubsection{TABLOID}\index{Tools!TABLOID}
 One of the outcomes next to the LOD application itself was the Tabloid ("Toolkit ABout Linked Open Institutional Data"), \emph{"a toolkit intended to help institutions and developers to both publish and consume linked data"}. It contains work-flows, documentations, examples and tools~\cite{lucero:tabloid} trying to address different roles such as managers, developers and users. Tabloid try to help people to understand LD, what can be done with it and give advice on a technical perspective, how to publish and consume LD, providing at the same time a detailed and generic way.
 
-\subsection{Linked Data: Evolving the Web into a Global Data Space (Heath, Bizer)}\index{Architectures!Linked Data Book}
-
-Another big effort ampng many others of describing LD in general, how to publish and consume them and how to implement applications was done by the so called "Linked Data book" by Heath and Bizer~\cite{heath2011linked}, which received a lot of attention.
-
-The book aims in general to give a basic understanding of LD and describing publication and consumption of LD. They providing advices and best practices, including architectures approaches, identifying the right set of URIs and vocabulary and much more. They also described an architecture, to be seen in figure~\ref{ld_architecture}
+\subsection{Linked Data book}\index{Architectures!Linked Data Book}
 
 \begin{figure}[ht]
 	\centering
@@ -96,27 +90,59 @@ The book aims in general to give a basic understanding of LD and describing publ
 	\label{ld_architecture}
 \end{figure}
 
+Another big effort ampng many others of describing LD in general, how to publish and consume them and how to implement applications was done by the book "Linked Data: Evolving the Web into a Global Data Space" by Heath and Bizer~\cite{heath2011linked}, which received a lot of attention.
+
+The book aims in general to give a basic understanding of LD and describing publication and consumption of LD. They providing advices and best practices, including architectures approaches, identifying the right set of URIs and vocabulary and much more. They also described an architecture, to be seen in figure~\ref{ld_architecture}
+
 Next to patterns they also provide a general workflow for LD publishing, see figure~\ref{ld_architecture}. But comparing to the introduced architectures in the previous sections, the workflow has a different approach: instead of holding the data in a Triple Store, the workflow access and transforms the raw data on-the-fly for every request.
 
-Next to this workflow, the book also provides various "recipes" for publishing LD and one of them is also to hold the data in a triple store as shown by Euclid and LUCERO. Furthermore the book provides a guide for the D2R-Server, which will be described in section~\ref{d2rserver}.
+Next to this workflow, the book also provides various "recipes" for publishing LD and one of them is also to hold the data in a triple store as shown by Euclid and LUCERO. Furthermore the book provides a guide for the D2R-Server, which will be described in section~\ref{d2rq}.
 
 \section{Frameworks}
 
-\subsection{D2R Server}\index{Framework!D2R Server}~\label{d2rserver}
-The D2R Server was introduced by the Free University of Berlin and is a tool for publishing a non-RDF database as LD interface, supporting RDF browsers, SPARQL clients and normal HTML browsers.~\footnote{\url{http://wifo5-03.informatik.uni-mannheim.de/bizer/d2r-server/publishing/}} By installing and running it, the tool auto-generates an intentional mapping file, which can easily be customized, and then publishes the aimed database to the semantic web.
+\subsection{D2RQ Platform}\index{Framework!D2RQ Platform}~\label{d2rq}
 
 \begin{figure}[ht]
 	\centering
-\includegraphics[width=\textwidth]{img/d2r_architecture.png}
+\includegraphics[width=\textwidth]{img/d2rq_architecture.png}
 	\caption{D2R Server architecture}
-	\label{d2r_architecture}
+	\label{d2rq_architecture}
 \end{figure}
 
+\begin{verse}
+\textbf{NOTE:} The last update on the D2RQ platform was in 2012 (version 0.8.1) and on the D2R Server in 2009 (version 0.7)
+\end{verse}
+
+The D2RQ platform~\footnote{\url{http://d2rq.org}} was introduced by the Free University of Berlin and provides a database-to-RDF mapping. It is licensed under the terms of the GNU General Public License. 
+
+To map a relational database the platform provides a declarative mapping language, expressed in RDF, which is then be used to provide access to the database in the following, read-only, ways:~\cite{d2rq:w3c}
+
+\begin{itemize}
+\item \textbf{RDF dumps}
+\item \textbf{RDF APIs}
+\item \textbf{SPARQL endpoint} (D2R Server)
+\item \textbf{Linked Data}
+\item \textbf{HTML view} (D2R Server)
+\end{itemize}
+
+For an overview of the framework structure see figure~\ref{d2rq_architecture}.
+
+\subsubsection{D2R Server}\index{Framework!D2RQ Platform!D2R Server}
+Part of the platform is the D2R Server~\footnote{\url{http://d2rq.org/d2r-server}}, which provides the public access to the platform over SPARQL and HTML, publishing it to the semantic web. More concrete, the server provides a dereferencing interface, for HTTP request dereferencing, and a SPARQL interface. 
+
+The server uses the mentioned \textbf{On-The-Fly Dereferencing Pattern} and does not provide a triple store, therefore it may be not has as good performance than tools with a triple store, although the team made a great effort to improve it.
+
+Part of the server is also a tool which generates automatically a corresponding mapping and RDF vocabulary for an existing table structure, using table names as class names and column names as property names. The generated mapping file can then be customised.~\cite{bizer2006d2r}
+
+The following applications are examples using D2R-Server:
+
+\begin{itemize}
+\item DBLP Bibliography (University of Hannover)~\footnote{\url{http://dblp.uni-trier.de/}}
+\item DBtune (University of London)~\footnote{\url{http://dbtune.org/}}
+\item Database of the Nobel Prize~\footnote{\url{http://data.nobelprize.org/}}
+\end{itemize}
+
 \subsection{Information Workbench}\index{Framework!Information Workbench}
-
-\url{https://www.fluidops.com/en/products/information_workbench/}
-
-\cite{haase2011information}
 
 \begin{figure}[ht]
 	\centering
@@ -124,6 +150,22 @@ The D2R Server was introduced by the Free University of Berlin and is a tool for
 	\caption{Architecture of the Information Workbench}
 	\label{iw_architecture}
 \end{figure}
+
+The Information Workbench~\footnote{\url{https://www.fluidops.com/en/products/information_workbench/}} is a high customisable tool to support the building of Linked Data applications, from basic data integration up to rich UI and visualisations. The tool is developed by fluidOps and is published as Community Edition free available and under an Open Source License with a limited selection of capablities and only for non-productive use (educational use, testing, development). The enterprise edition is also available but not for free.
+
+The workbench consists of four layers (see figure~\ref{iw_architecture} for an overview):~\cite{haase2011information}~\cite{gossenainformation}
+
+\begin{itemize}
+\item \textbf{Persistence}
+Using so-called \emph{providers}, the layers offer capabilities to integrate and convert data from different data source and stores them in a central triple store. Alternatively it also supports virtualised integration of local and public Linked Data sources using a \emph{federation layer}.
+\item \textbf{Platform}
+On top of the persistence layer the core Platform layer a selection of modules and functionalities covering generic needs of Linked Data applications, the most important are a \emph{Semantic Wiki \& Widget Engin}e, an \emph{User Management \& Access Control}, a \emph{Search \& Analytics Engine} and a \emph{Workflow Engine}.
+\item \textbf{SDK} To support customised applications the workbench provides a SDK (Solution Development Kit) for developers to build domain specific applications, including \emph{extensible data providers}, \emph{data management facilities}, modified \emph{ontologies}, \emph{templates}, \emph{widgets} and different APIs for extensive \emph{system configuration}, \emph{rules} and \emph{workflows}.
+\item \textbf{Solution}
+On top of all layer stands the final solution, the application itself, which is either directly deployed through a RESTful API or over a zipped file for other installation approaches.
+\end{itemize}
+
+The resulting application is again customisable by widget and different views, enabling data exploration and visualisation.
 
 \subsection{Synth}\index{Framework!Synth}
 

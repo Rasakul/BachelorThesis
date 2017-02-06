@@ -40,3 +40,25 @@ How much effort needs the maintenance?
 \item Do you refer to additional access methods?
 \end{itemize}
 \end{itemize}
+
+\subsection{Rating}
+
+Since a detailed rating scale for each criteria or in each category would go beyond the scope of this paper, a much simpler scale will be used, seen in table~\ref{tbl_rating}. Only the impact will be measured.
+
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Rating} & \textbf{Explanation} \\ \hline
+--              & high negative impact \\ \hline
+-               & negative impact      \\ \hline
+0               & no impact            \\ \hline
++               & positiv impact       \\ \hline
+++              & high positiv impact  \\ \hline
+\end{tabular}
+\caption{Rating scale}
+\label{tbl_rating}
+\end{table}
+
+\section{Test setting}
+To ensure comparable results with different frameworks, the same test setting will be used for each of them. A SQL database is assumed with x \todo{define scale} datasets, representing a publication database. Each framework then will be used to build a SPARQL endpoint under Ubuntu 16.10 (Yakkety Yak) and be rated against the proposed criteria.
