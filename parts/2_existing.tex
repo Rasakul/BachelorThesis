@@ -1,7 +1,7 @@
 \chapter{State Of The Art (RQ1)}
 In order to compare frameworks an understanding of existing frameworks is necessary. This section will look at existing frameworks, what kind of frameworks they are, which of them can be used for this paper and which must be excluded. Furthermore, this section aims to understand how frameworks look like and will examine the architecture of them.
 
-\section{Architectures Of Frameworks}
+\section{Architectures Of Frameworks}\label{arch_frameworks}
 In this subsection the paper will look into three proposed models how frameworks (and/or implemented LD-applications) should look like. There are many other existing architectures and ongoing projects exposing data as Linked (Open) Data, this paper will use the following as representation of them.
 
 \newacronym{euclid}{EUCLID}{EdUcational Curriculum for the usage of Linked Data}
@@ -12,7 +12,7 @@ In this subsection the paper will look into three proposed models how frameworks
 \includegraphics[width=0.5\textwidth]{img/euclid_logo.png}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 \includegraphics[width=1\textwidth]{img/euclid_architecture.png}
 	\caption{General EUCLID architecture}
@@ -58,12 +58,12 @@ Describing the use of complex queries on a fix set of data sources, enabling to 
 \newacronym{lucero}{LUCERO}{Linking University Content for Education and Research Online}
 \subsection{LUCERO}\index{Architectures!LUCERO}
 
-%\begin{figure}[ht]
+%\begin{figure}[htbp]
 %	\centering
 %\includegraphics[width=0.15\textwidth]{img/lucero_logo.png}
 %\end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 \includegraphics[width=\textwidth]{img/lucero_architecture.png}
 	\caption{LUCERO work flow \& architecture}
@@ -83,7 +83,7 @@ One of the outcomes next to the LOD application itself was the Tabloid ("Toolkit
 
 \subsection{Linked Data book}\index{Architectures!Linked Data Book}
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 \includegraphics[width=\textwidth]{img/ld_architecture.png}
 	\caption{Linked Data Publishing Options and Workflows according to the LD book}
@@ -102,9 +102,9 @@ Next to this workflow, the book also provides various "recipes" for publishing L
 
 \subsection{D2RQ Platform}\index{Framework!D2RQ Platform}~\label{d2rq}
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
-\includegraphics[width=\textwidth]{img/d2rq_architecture.png}
+\includegraphics[width=0.8\textwidth]{img/d2rq_architecture.png}
 	\caption{D2R Server architecture}
 	\label{d2rq_architecture}
 \end{figure}
@@ -144,7 +144,7 @@ The following applications are examples using D2R-Server:
 
 \subsection{Information Workbench}\index{Framework!Information Workbench}
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 \includegraphics[width=0.9\textwidth]{img/information_workbench_architecture.png}
 	\caption{Architecture of the Information Workbench}
@@ -166,8 +166,6 @@ On top of all layer stands the final solution, the application itself, which is 
 \end{itemize}
 
 The resulting application is again customisable by widget and different views, enabling data exploration and visualisation.
-
-\subsection{Synth}\index{Framework!Synth}
 
 \subsection{Silk - The Linked Data Integration Framework}\index{Framework!Silk}\label{silk}
 \url{http://silkframework.org/}
@@ -195,3 +193,16 @@ Another interesting project is the LODUM project (Linked Open Data University of
 
 It was excluded for this paper because the project don't provide public documentation of their architecture or any other part of their technical details
 \url{http://lodum.de/}
+
+\subsection{Synth and SHDM}\index{Framework!Synth}
+
+\begin{figure}[htbp]
+	\centering
+\includegraphics[width=\textwidth]{img/synth-concept.png}
+	\caption{Concept of the Synth Architecture}
+	\label{synth_concept}
+\end{figure}
+
+Synth~\footnote{\url{http://www.tecweb.inf.puc-rio.br/synth}} is a development environment for building SHDM~\footnote{\url{https://www.w3.org/2005/Incubator/model-based-ui/wiki/SHDM_-_Semantic_Hypermedia_Design_Method}} (Semantic Hypermedia Design Method) modelled applications, providing a set of modules, receiving SHDM generated models. Synth comes with a web browser GUI for adding and editing these models. A conceptual view of the architecture can be seen in figure~\ref{synth_concept}, where the dashed boxes are modules and the whites boxes insides the module components.~\cite{desynth} The authors de Souza Bomfim and Schwabe describe in two papers, how a Linked Data application can be build with the environment: ~\cite{desynth} and~\cite{de2011design}.
+
+Since their description is very abstract and there are no further documentations of the tool, it was excluded for this paper. 
