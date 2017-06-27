@@ -1,8 +1,10 @@
 \chapter{Comparison (RQ2 \& RQ3)}
 
-\section{Overview}
+It this section the comparison itself will be done. In order to do that, first in section~\ref{comp_classification} the classification introduced in section~\ref{classification} will be applied the found solution. Then in section~\ref{comparison} the criteria defined in section~\ref{criteria} will be applied for each of them, divided in the defined groups. The summary in section~\ref{comp_summary} will then give in overview of the done comparison. 
 
-\begin{table}[]
+The found solutions can be seen as recap in table~\ref{tb:cmp_overview}, in order to simplify the following tables, each of the solutions is given an ID to refer.
+
+\begin{table}[htbp]
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -16,38 +18,116 @@
 7           & Eclipse RDF4J         \\ \hline
 8           & Apache Jena           \\ \hline
 \end{tabular}
-\caption{Overview of the tools/frameworks}
+\caption{Overview of the solutions}
 \label{tb:cmp_overview}
 \end{table}
 
-\subsection{Classification}
+\section{Classification}\label{comp_classification}
 
 \begin{sidewaystable}[p]
 \bigskip
 \centering\small\setlength\tabcolsep{2pt}
 \hspace*{-1cm}
-\begin{tabular}{|l|c|c|c|c|c|l|}
+\begin{tabular}{|c|c|c|c|c|c|l|}
 \hline
-\textbf{Framework} & \multicolumn{1}{l|}{\textbf{Architecture}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Full-\\ Stack\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Present-\\ ation \\ layer\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Business \\ Layer\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Data \\ Access \\ Layer\end{tabular}}} & \textbf{Note} \\ \hline
-\begin{tabular}[c]{@{}l@{}}Euclid \\ Project\end{tabular} & x &  &  & x & x &  \\ \hline
-LUCERO & x &  &  & x & x &  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Linked Data \\ book\end{tabular} & x &  &  & x & x &  \\ \hline
-\begin{tabular}[c]{@{}l@{}}D2RQ \\ Platform\end{tabular} &  &  & x & x & x & \begin{tabular}[c]{@{}l@{}}D2R Server includes HTML \\ view and SPARQL endpoints\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}Information \\ Workbench\end{tabular} &  & x &  &  &  &  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Linked Data \\ Integration\\  Framework\end{tabular} &  &  &  & x & x &  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Eclipse \\ RDF4J\end{tabular} &  &  &  & x & x &  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Apache \\ Jena\end{tabular} &  &  & x & x & x & \begin{tabular}[c]{@{}l@{}}Provides optionally SPARQL \\ endpoints and stand-alone \\ server with Jetty\end{tabular} \\ \hline
+\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Sol- \\ ution\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Arch-\\ itecture\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Full-\\ Stack\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Present-\\ ation \\ layer\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Business \\ Layer\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Data \\ Access \\ Layer\end{tabular}}} & \textbf{Note} \\ \hline
+1 & x &  &  & x & x &  \\ \hline
+2 & x &  &  & x & x &  \\ \hline
+3 & x &  &  & x & x &  \\ \hline
+4 &  &  & x & x & x & \begin{tabular}[c]{@{}l@{}}D2R Server includes HTML \\ view and SPARQL endpoints\end{tabular} \\ \hline
+5 &  & x &  &  &  &  \\ \hline
+6 &  &  &  & x & x &  \\ \hline
+7 &  &  &  & x & x &  \\ \hline
+8 &  &  & x & x & x & \begin{tabular}[c]{@{}l@{}}Provides optionally SPARQL \\ endpoints and stand-alone \\ server with Jetty\end{tabular} \\ \hline
 \end{tabular}
 \hspace*{-1cm}
 \caption{Classification}
 \label{tbl:cmp_classification}
 \end{sidewaystable}
 
-\section{Comparison of the Frameworks}
-\subsection{Maintainability}
-\subsection{Data quality}
-\subsection{Usability}
-\subsection{Data formats}
-\subsection{Linked Data Publishing Checklist}
+\section{Comparison}\label{comparison}
+\subsection{Criteria Group 1: Criteria from previous study}
 
-\section{Summary}
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|l|l|l|l|}
+\hline
+\textbf{Solution}   & \textbf{Maintainability} & \textbf{Data Freshness} & \textbf{Flexibility} & \textbf{Note} \\ \hline
+\textbf{1} &                          &                         &                      &               \\ \hline
+\textbf{2} &                          &                         &                      &               \\ \hline
+\textbf{3} &                          &                         &                      &               \\ \hline
+\textbf{5} &                          &                         &                      &               \\ \hline
+\textbf{5} &                          &                         &                      &               \\ \hline
+\textbf{6} &                          &                         &                      &               \\ \hline
+\textbf{7} &                          &                         &                      &               \\ \hline
+\textbf{8} &                          &                         &                      &               \\ \hline
+\end{tabular}
+\caption{Comparison Criteria Group 1}
+\label{tbl_comp_gr_1}
+\end{table}
+
+\subsection{Criteria Group 2: Usability}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|l|l|l|l|l|l|}
+\hline
+\textbf{Solution} & \textbf{Effectiveness} & \textbf{Efficiency} & \textbf{Satisfaction} & \textbf{Security} & \textbf{Learnability} & \textbf{Note} \\ \hline
+\textbf{1}        &                        &                     &                       &                   &                       &               \\ \hline
+\textbf{2}        &                        &                     &                       &                   &                       &               \\ \hline
+\textbf{3}        &                        &                     &                       &                   &                       &               \\ \hline
+\textbf{5}        &                        &                     &                       &                   &                       &               \\ \hline
+\textbf{5}        &                        &                     &                       &                   &                       &               \\ \hline
+\textbf{6}        &                        &                     &                       &                   &                       &               \\ \hline
+\textbf{7}        &                        &                     &                       &                   &                       &               \\ \hline
+\textbf{8}        &                        &                     &                       &                   &                       &               \\ \hline
+\end{tabular}
+\caption{Comparison Criteria Group 2: Usability}
+\label{tbl_comp_gr_2}
+\end{table}
+
+\subsection{Criteria Group 3: Data formats}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|l|l|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+\textbf{Solution} & \textbf{Data formats} & \textbf{Note} \\ \hline
+\textbf{1}        &                       &               \\ \hline
+\textbf{2}        &                       &               \\ \hline
+\textbf{3}        &                       &               \\ \hline
+\textbf{5}        &                       &               \\ \hline
+\textbf{5}        &                       &               \\ \hline
+\textbf{6}        &                       &               \\ \hline
+\textbf{7}        &                       &               \\ \hline
+\textbf{8}        &                       &               \\ \hline
+\end{tabular}
+\caption{Comparison Criteria Group 3: Data formats}
+\label{tbl_comp_gr_3}
+\end{table}
+
+\subsection{Criteria Group 4: Linked Data Publishing Checklist}
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+\textbf{Solution} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} \\ \hline
+Does your data set links to other data sets? & x & x & x & x & x & x & x & x \\ \hline
+Do you provide provenance metadata? & x & x & x & x & x & x & x & x \\ \hline
+Do you provide licensing metadata? & x & x & x & x & x & x & x & x \\ \hline
+Do you use terms from widely deployed vocabularies? & x & x & x & x & x & x & x & x \\ \hline
+Are the URIs of proprietary vocabulary terms dereferenceable? & x & x & x & x & x & x & x & x \\ \hline
+Do you map proprietary vocabulary terms to other vocabularies? & x & x & x & x & x & x & x & x \\ \hline
+Do you provide data set-level metadata? & x & x & x & x & x & x & x & x \\ \hline
+Do you refer to additional access methods? & x & x & x & x & x & x & x & x \\ \hline
+\end{tabular}%
+}
+\caption{My caption}
+\label{my-label}
+\end{table}
+
+\section{Summary}\label{comp_summary}
