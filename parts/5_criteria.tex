@@ -1,64 +1,95 @@
-\chapter{Criteria}
+\chapter{Criteria}\label{criteria}
 
-From a previous study~\cite{baronyai_publishing_2016} conducted by the author, users at TU Wien are expecting and requesting from a LOD application: \textbf{clear data ownership}, management of \textbf{data freshness} and of \textbf{data quality} and \textbf{maintenance}. Since data ownership is a concern of organisation and cannot be clarified by a tool, data freshness, data quality and maintainability are introduced as criteria. Since data quality is a very generic term, it will be used as criteria category. Additionally a concern of the stakeholders from the paper was how to deal with legacy data, therefore flexibility is included to Data quality.
+Since there are a wide variety of solutions, it is hard to find a set of criteria which can be applied to all in the same way in order to compare them. Therefore this paper will use 4 different criteria groups to ensure higher cover of them, even in case some of the criteria might not be applicable. Otherwise a comparison will be not possible.
 
+\section{Criteria Group 1: Criteria from previous study}
 
-
-
-\begin{itemize}
-\item Maintainability
-How much effort needs the maintenance? 
-
-\item Data quality 
-\begin{itemize}
-\item Data freshness (ability to handle new data)
-\item Flexibility (of ontology) (deal with heterogenous and/or legacy data)
-\end{itemize}
-
-\item Usability: (adopted from Abran et.al.~\cite{abran2003usability} to fit)
-\begin{itemize}
-\item Effectiveness (How well do the users achieve their goals using the system?)
-\item Efficiency (Time to achieve one task, complexity to handle)
-\item Satisfaction
-\item Security
-\item Learnability (Documentation)
-\item Performance
-\end{itemize}
-
-\item Available data formats (HTML, Relational Databases, Wrapping Existing Application or Web APIs, XML, Tables/Spreadsheets)
-
-%LD book
-\item Linked Data Publishing Checklist (from Heath et.al.~\cite{heath2011linked})
-\begin{itemize}
-\item Does your data set links to other data sets?
-\item Do you provide provenance metadata?
-\item Do you provide licensing metadata?
-\item Do you use terms from widely deployed vocabularies?
-\item Are the URIs of proprietary vocabulary terms dereferenceable?
-\item Do you map proprietary vocabulary terms to other vocabularies?
-\item Do you provide data set-level metadata?
-\item Do you refer to additional access methods?
-\end{itemize}
-\end{itemize}
-
-\section{Rating}
-
-Since a detailed rating scale for each criteria or in each category would go beyond the scope of this paper, a much simpler scale will be used, seen in table~\ref{tbl_rating}. Only the impact will be measured.
-
-\begin{table}[htbp]
+\begin{table}[htb]
 \centering
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|l|l|}
 \hline
-\textbf{Rating} & \textbf{Explanation} \\ \hline
---              & high negative impact \\ \hline
--               & negative impact      \\ \hline
-0               & no impact            \\ \hline
-+               & positiv impact       \\ \hline
-++              & high positiv impact  \\ \hline
+\textbf{Criteria} & \textbf{Scala} & \textbf{Explanation}                                 \\ \hline
+Maintainability   & +/-            & How much effort needs the maintenance?                        \\ \hline
+Data Freshness    & yes/ no        & Can it deal with new data?                        \\ \hline
+Flexibility       & yes/ no        & \begin{tabular}[c]{@{}l@{}}Can it deal with heterogenous and/or legacy data? \\ Can it deal with changes in the ontology?\end{tabular} \\ \hline
 \end{tabular}
-\caption{Rating scale}
-\label{tbl_rating}
+\caption{Criteria group 1}
+\label{tbl_cr_1_scala}
 \end{table}
 
-\section{Test setting}
-To ensure comparable results with different frameworks, the same test setting will be used for each of them. A SQL database is assumed with x \todo{define scale} datasets, representing a publication database. Each framework then will be used to build a SPARQL endpoint under Ubuntu 16.10 (Yakkety Yak) and be rated against the proposed criteria.
+From a previous study~\cite{baronyai_publishing_2016} conducted by the author, users at TU Wien are expecting and requesting from a LOD application: \textbf{clear data ownership}, management of \textbf{data freshness} and \textbf{data quality} and \textbf{maintenance}. Since data ownership is a concern of organisation and cannot be clarified by a tool, data freshness, data quality and maintainability are introduced as criteria. Since data quality is a very generic term, it will be used as criteria category. Additionally a concern of the stakeholders from the paper was how to deal with legacy data, therefore flexibility is included to Data quality.
+
+The resulting criteria can be seen in table~\ref{tbl_cr_1_scala}.
+
+\section{Criteria Group 2: Usability}
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Criteria} & \textbf{Scala} & \textbf{Explanation}                                                                                                \\ \hline
+Effectiveness     & +/-            & \begin{tabular}[c]{@{}l@{}}How well do the users achieve their goals using the system? \\ (good/bad)\end{tabular}   \\ \hline
+Efficiency        & +/-            & \begin{tabular}[c]{@{}l@{}}What resources are consumed in order to achieve their goals? \\ (less/much)\end{tabular} \\ \hline
+Satisfaction      & +/-            & \begin{tabular}[c]{@{}l@{}}How do the users feel about their use of the system? \\ (good/bad)\end{tabular}          \\ \hline
+Security          & +/-            & \begin{tabular}[c]{@{}l@{}}How well is security ensured? \\ (good/bad)\end{tabular}                                 \\ \hline
+Learnability      & +/-            & \begin{tabular}[c]{@{}l@{}}How much time is needed to learn the system? \\ (less/much)\end{tabular}                 \\ \hline
+\end{tabular}
+\caption{Criteria Group 2: Usability}
+\label{tbl_cr_2_scala}
+\end{table}
+
+In every software application and especially solutions designed for end-users, usability is a huge and very important point these days. There are many definitions and measurements, ISO and other proposed models, trying to classify and define usability. This paper will use an enhanced ISO model, proposed by Abran et.al.~\cite{abran2003usability}. Since the goal of this paper is not a complete usability analysis of the tools/frameworks and the variety of the chosen tools is too wide, the analysis of these aspect will be more of a general type. Abran et.al. are proposing various measurements for the different categories of their model, the interested reader might use them for a detailed analysis. For this paper, these measurements will only be used as a guideline to estimate an assessment for the tools.
+
+The model can be seen in table~\ref{tbl_cr_2_scala}
+
+\section{Criteria Group 3: Data formats}
+
+An important aspect for the final decision for one of the tools can be the supported data format. It might be an (external) requirement or resulting from the fact of existing data. Since this highly depends on the context and the use case, this criteria will not be rated in any way, this paper will only line out the supported data formats.
+
+\section{Criteria Group 4: Linked Data Publishing Checklist}
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Criteria}}                        \\ \hline
+Does your data set links to other data sets?                   \\ \hline
+Do you provide provenance metadata?                            \\ \hline
+Do you provide licensing metadata?                             \\ \hline
+Do you use terms from widely deployed vocabularies?            \\ \hline
+Are the URIs of proprietary vocabulary terms dereferenceable?  \\ \hline
+Do you map proprietary vocabulary terms to other vocabularies? \\ \hline
+Do you provide data set-level metadata?                        \\ \hline
+Do you refer to additional access methods?                     \\ \hline
+\end{tabular}
+\caption{Criteria Group 4: Linked Data Publishing Checklist}
+\label{tbl_cr_4_scala}
+\end{table}
+
+Since the whole paper is about Linked Data, it is important to analyse not only the tools itself but also the resulting LDs. In order to do that, the Linked Data Publishing Checklist by Heath et.al.~\cite{heath2011linked} will be used. Another alternative could be the the LOD defintion itself by Tim Berners-Lee~\cite{berners2006linked}, but this paper will presume, that a L(O)D tool will produce valid L(O)D. As one can expect from a checklist, the rating for this criteria will be only fulfilled/not fulfilled.
+
+The checklist can be seen in table~\ref{tbl_cr_4_scala}
+
+\section{End result}
+
+Since this paper is designed to be used as a help for decisions, the aim can not be to find the "best" solution, therefore there will not be such a thing like an end result. E.g. for some situation a solution with bad usability can be more appropriate because of the supported data formats than a solution with a higher overall rating.
+
+\begin{table}[htb]
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Criteria group}             & \multicolumn{1}{c|}{\textbf{Criteria}} \\ \hline
+\multirow{3}{*}{Group 1}            & Maintainability                        \\ \cline{2-2} 
+                                    & Data Freshness                         \\ \cline{2-2} 
+                                    & Flexibility                            \\ \hline
+\multirow{5}{*}{Group 2: Usability} & Effectiveness                          \\ \cline{2-2} 
+                                    & Efficiency                             \\ \cline{2-2} 
+                                    & Satisfaction                           \\ \cline{2-2} 
+                                    & Security                               \\ \cline{2-2} 
+                                    & Learnability                           \\ \hline
+Group 3: Data formats               & Data formats                           \\ \hline
+Group 4: LD Publishing Checklist    & LD Publishing Checklist                \\ \hline
+\end{tabular}
+\centering
+\caption{Complete Criteria Catalogue}
+\label{tbl_cr_all}
+\end{table}
