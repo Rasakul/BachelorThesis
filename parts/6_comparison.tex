@@ -1,13 +1,14 @@
-\chapter{Comparison (RQ2 \& RQ3)}
+\chapter{Comparison (RQ3)}\label{comparison}
 
 It this section the comparison itself will be done. In order to do that, first in section~\ref{comp_classification} the classification introduced in section~\ref{classification} will be applied the found solution. Then in section~\ref{comparison} the criteria defined in section~\ref{criteria} will be applied for each of them, divided in the defined groups. The summary in section~\ref{comp_summary} will then give in overview of the done comparison. 
 
-The found solutions can be seen as recap in table~\ref{tb:cmp_overview}, in order to simplify the following tables, each of the solutions is given an ID to refer.
+An overview of the solutions to compare can be seen as recap in table~\ref{tb:cmp_overview}, in order to simplify the following tables, each of the solutions is given an ID to refer.
 
 \begin{table}[htbp]
 \centering
 \begin{tabular}{|l|l|}
 \hline
+\rowcolor[HTML]{EFEFEF} 
 \textbf{ID} & \textbf{Framework}    \\ \hline
 1           & Euclid Project        \\ \hline
 2           & LUCERO                \\ \hline
@@ -22,112 +23,254 @@ The found solutions can be seen as recap in table~\ref{tb:cmp_overview}, in orde
 \label{tb:cmp_overview}
 \end{table}
 
-\section{Classification}\label{comp_classification}
-
-\begin{sidewaystable}[p]
-\bigskip
-\centering\small\setlength\tabcolsep{2pt}
-\hspace*{-1cm}
-\begin{tabular}{|c|c|c|c|c|c|l|}
-\hline
-\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Sol- \\ ution\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Arch-\\ itecture\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Full-\\ Stack\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Present-\\ ation \\ layer\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Business \\ Layer\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Data \\ Access \\ Layer\end{tabular}}} & \textbf{Note} \\ \hline
-1 & x &  &  & x & x &  \\ \hline
-2 & x &  &  & x & x &  \\ \hline
-3 & x &  &  & x & x &  \\ \hline
-4 &  &  & x & x & x & \begin{tabular}[c]{@{}l@{}}D2R Server includes HTML \\ view and SPARQL endpoints\end{tabular} \\ \hline
-5 &  & x &  &  &  &  \\ \hline
-6 &  &  &  & x & x &  \\ \hline
-7 &  &  &  & x & x &  \\ \hline
-8 &  &  & x & x & x & \begin{tabular}[c]{@{}l@{}}Provides optionally SPARQL \\ endpoints and stand-alone \\ server with Jetty\end{tabular} \\ \hline
-\end{tabular}
-\hspace*{-1cm}
-\caption{Classification}
-\label{tbl:cmp_classification}
-\end{sidewaystable}
-
-\section{Comparison}\label{comparison}
-\subsection{Criteria Group 1: Criteria from previous study}
-
-\begin{table}[htbp]
-\centering
-\begin{tabular}{|c|l|l|l|l|}
-\hline
-\textbf{Solution}   & \textbf{Maintainability} & \textbf{Data Freshness} & \textbf{Flexibility} & \textbf{Note} \\ \hline
-\textbf{1} &                          &                         &                      &               \\ \hline
-\textbf{2} &                          &                         &                      &               \\ \hline
-\textbf{3} &                          &                         &                      &               \\ \hline
-\textbf{5} &                          &                         &                      &               \\ \hline
-\textbf{5} &                          &                         &                      &               \\ \hline
-\textbf{6} &                          &                         &                      &               \\ \hline
-\textbf{7} &                          &                         &                      &               \\ \hline
-\textbf{8} &                          &                         &                      &               \\ \hline
-\end{tabular}
-\caption{Comparison Criteria Group 1}
-\label{tbl_comp_gr_1}
-\end{table}
-
-\subsection{Criteria Group 2: Usability}
-
-\begin{table}[htbp]
-\centering
-\begin{tabular}{|c|l|l|l|l|l|l|}
-\hline
-\textbf{Solution} & \textbf{Effectiveness} & \textbf{Efficiency} & \textbf{Satisfaction} & \textbf{Security} & \textbf{Learnability} & \textbf{Note} \\ \hline
-\textbf{1}        &                        &                     &                       &                   &                       &               \\ \hline
-\textbf{2}        &                        &                     &                       &                   &                       &               \\ \hline
-\textbf{3}        &                        &                     &                       &                   &                       &               \\ \hline
-\textbf{5}        &                        &                     &                       &                   &                       &               \\ \hline
-\textbf{5}        &                        &                     &                       &                   &                       &               \\ \hline
-\textbf{6}        &                        &                     &                       &                   &                       &               \\ \hline
-\textbf{7}        &                        &                     &                       &                   &                       &               \\ \hline
-\textbf{8}        &                        &                     &                       &                   &                       &               \\ \hline
-\end{tabular}
-\caption{Comparison Criteria Group 2: Usability}
-\label{tbl_comp_gr_2}
-\end{table}
-
-\subsection{Criteria Group 3: Data formats}
-
-\begin{table}[htbp]
-\centering
-\begin{tabular}{|c|l|l|}
-\hline
-\rowcolor[HTML]{EFEFEF} 
-\textbf{Solution} & \textbf{Data formats} & \textbf{Note} \\ \hline
-\textbf{1}        &                       &               \\ \hline
-\textbf{2}        &                       &               \\ \hline
-\textbf{3}        &                       &               \\ \hline
-\textbf{5}        &                       &               \\ \hline
-\textbf{5}        &                       &               \\ \hline
-\textbf{6}        &                       &               \\ \hline
-\textbf{7}        &                       &               \\ \hline
-\textbf{8}        &                       &               \\ \hline
-\end{tabular}
-\caption{Comparison Criteria Group 3: Data formats}
-\label{tbl_comp_gr_3}
-\end{table}
-
-\subsection{Criteria Group 4: Linked Data Publishing Checklist}
+\section{Classification}~\label{comp_classification}
 
 \begin{table}[htbp]
 \centering
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\begin{tabular}{|c|c|c|c|c|c|l|}
 \hline
 \rowcolor[HTML]{EFEFEF} 
-\textbf{Solution} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} \\ \hline
-Does your data set links to other data sets? & x & x & x & x & x & x & x & x \\ \hline
-Do you provide provenance metadata? & x & x & x & x & x & x & x & x \\ \hline
-Do you provide licensing metadata? & x & x & x & x & x & x & x & x \\ \hline
-Do you use terms from widely deployed vocabularies? & x & x & x & x & x & x & x & x \\ \hline
-Are the URIs of proprietary vocabulary terms dereferenceable? & x & x & x & x & x & x & x & x \\ \hline
-Do you map proprietary vocabulary terms to other vocabularies? & x & x & x & x & x & x & x & x \\ \hline
-Do you provide data set-level metadata? & x & x & x & x & x & x & x & x \\ \hline
-Do you refer to additional access methods? & x & x & x & x & x & x & x & x \\ \hline
-\end{tabular}%
+\textbf{ID} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Arch-\\ itecture\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Full-\\ Stack\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Present-\\ ation \\ layer\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Business \\ Layer\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Data \\ Access \\ Layer\end{tabular}}} & \textbf{Note} \\ \hline
+\textbf{1} & x &  &  & x & x &  \\ \hline
+\textbf{2} & x &  &  & x & x &  \\ \hline
+\textbf{3} & x &  &  & x & x &  \\ \hline
+\textbf{4} &  &  & x & x & x & \begin{tabular}[c]{@{}l@{}}D2R Server includes HTML \\ view and SPARQL endpoints\end{tabular} \\ \hline
+\textbf{5} &  & x &  &  &  &  \\ \hline
+\textbf{6} &  &  &  & x & x &  \\ \hline
+\textbf{7} &  &  &  & x & x &  \\ \hline
+\textbf{8} &  &  & x & x & x & \begin{tabular}[c]{@{}l@{}}Provides optionally SPARQL \\ endpoints and stand-alone \\ server with Jetty\end{tabular} \\ \hline
+\end{tabular}
 }
-\caption{My caption}
-\label{my-label}
+\caption{Classification}
+\label{tbl:cmp_classification}
 \end{table}
 
+\section{Criteria Group 1: Criteria from previous study}
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|l|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+\textbf{ID} & \textbf{\begin{tabular}[c]{@{}l@{}}Maintain\\ -ability\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Data \\ Freshness\end{tabular}} & \textbf{Flexibility} & \textbf{Note} \\ \hline
+\textbf{1}  & +                                                                     & yes*                                                                 & yes*                                                              & *depending on implementation     \\ \hline
+\textbf{2}  & ?*                                                                    & yes                                                                  & yes*                                                              & *further investigations required \\ \hline
+\textbf{3}  & +                                                                     & yes*                                                                 & yes*                                                              & *depending on implementation     \\ \hline
+\textbf{4}  & +                                                                     & yes                                                                  & yes*                                                              & *depending on configuration      \\ \hline
+\textbf{5}  & ?*                                                                    & yes*                                                                 & yes*                                                              & *depending on configuration      \\ \hline
+\textbf{6}  & +                                                                     & yes                                                                  & yes*                                                              &                                  \\ \hline
+\textbf{7}  & $\sim$*                                                               & ?*                                                                   & yes*                                                              & *depending on implementation     \\ \hline
+\textbf{8}  & $\sim$*                                                               & ?*                                                                   & yes*                                                              & *depending on implementation     \\ \hline
+\end{tabular}
+}
+\caption{Comparison Criteria Group 1}
+\label{tbl_comp_gr_1}
+\end{table}
+
+\subsection*{1: Euclid Project} 
+Since the Euclid Project is very generic, the Data Freshness and Flexibility totally depends on how the concepts are implemented in an application. If the concepts are correctly implemented, Maintainability is probably well supported, since the three-layered architecture is widely recognised for it. For Data Freshness and Flexibility, the implementation needs to be done focused on it, in order to achieve it, since the project does it not explicitly.
+
+\subsection*{2: LUCERO}
+The project supports Data Freshness by its Updaters and Schedulers, and can react to ontology changes by its Entity Name System. But it is unclear, how well it supports Maintainability, further investigations are required, which exceed the scope of this paper.
+
+\subsection*{3: Linked Data book}
+Similar to the Euclid Project, the Data Freshness and Flexibility is possible well supported, but depends on the implementation. It is also not an explicit focus. Maintainability again is inherit of the concept.
+
+\subsection*{4: D2RQ Platform}
+The D2RQ Mapping Language can flexibly handle heterogeneous data as well as legacy data, the quality of Data Freshness depends on the configuration but is itself inherit of the concept.
+
+\subsection*{5: Information Workbench}
+Since the Workbench is designed to easily integrate different datasources, it can handle legacy data and ontology changes relatively good, depending on custom configurations. It might be a challenge to find the correct configurations, but the provided documentation well done.
+
+\subsection*{6: LDIF}
+LDIF is explicit designed to handle various data sources and vocabularies, mapping them to an uniform vocabulary. The framework further provides scheduler to keep the data as fresh as needed (running hourly, daily etc.)
+
+\subsection*{7: Eclipse RDF4J}
+All three criteria are highly depending on the implementation of the framework and therefore how maintainability, freshness and flexibility are handled. The framework itself does only interact with a repository (read/write), which can potential be filled by another application which handles freshness and flexibility. Maintainability could be a bit tricky in this situation, if the other application is out of control of the RDF4J implementation.
+
+\subsection*{8: Apache Jena}
+Jena is very similar to RDF4J, all statements there are valid for Jena too.
+
+\subsection{Summary Group 1}
+Most of the solutions are supporting all data freshness and flexibility although most of them depending on the concrete implementation or configuration of the application. Only LDIF have a clear support of especially data freshness and flexibility. Maintainability is a critical point for most of the solutions.
+
+\section{Criteria Group 2: Usability}
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|l|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+\textbf{ID} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textbf{Effectiveness}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textbf{Efficiency}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textbf{Satisfaction}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textbf{Security}} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textbf{Learnability}} & \textbf{Note}                                                                     \\ \hline
+\textbf{1}  & N.A.                                                                & N.A.                                                             & N.A.                                                               & -                                                              & +                                                                  & \begin{tabular}[c]{@{}l@{}}Not applicable, \\ good documentation\end{tabular}     \\ \hline
+\textbf{2}  & N.A.                                                                & N.A.                                                             & N.A.                                                               & -                                                              & -                                                                  & \begin{tabular}[c]{@{}l@{}}No UI, no Security, \\ bad documentation\end{tabular}  \\ \hline
+\textbf{3}  & N.A.                                                                & N.A.                                                             & N.A.                                                               & -                                                              & +                                                                  & \begin{tabular}[c]{@{}l@{}}Not applicable, \\ good documentation\end{tabular}     \\ \hline
+\textbf{4}  & +                                                                   & +                                                                & +                                                                  & -                                                              & +                                                                  & \begin{tabular}[c]{@{}l@{}}Good documentation \\ and UI, no security\end{tabular} \\ \hline
+\textbf{5}  & +                                                                   & +                                                                & +*                                                                 & +                                                              & +*                                                                 & \begin{tabular}[c]{@{}l@{}}* "easy to learn, \\ hard to master"\end{tabular}      \\ \hline
+\textbf{6}  & N.A.                                                                & N.A.                                                             & N.A.                                                               & -                                                              & +                                                                  & \begin{tabular}[c]{@{}l@{}}Not applicable, \\ good documentation\end{tabular}     \\ \hline
+\textbf{7}  & N.A.                                                                & N.A.                                                             & N.A.                                                               & $\sim$                                                         & +                                                                  & \begin{tabular}[c]{@{}l@{}}Not applicable, \\ good documentation\end{tabular}     \\ \hline
+\textbf{8}  & N.A.                                                                & N.A.                                                             & N.A.                                                               & +                                                              & +                                                                  & \begin{tabular}[c]{@{}l@{}}Not applicable, \\ good documentation\end{tabular}     \\ \hline
+\end{tabular}%
+}
+\caption{Comparison Criteria Group 2: Usability}
+\label{tbl_comp_gr_2}
+\end{table}
+
+\subsection*{1: Euclid Project}
+Since the Usability totally depends on the implemented application, no general statements can be given here. Security is not explicit. The documentation is very good.
+
+\subsection*{2: LUCERO}
+The project does not support an explicit UI, therefore Usability is hard to evaluate. It also does not have any integrated security. The documentation is old and possible outdated, therefore learnability of the system is relatively bad.
+
+\subsection*{3: Linked Data book}
+Again, similar to Euclid, the Usability strongly depends on the implementation and is therefore not applicable. Security is not explicit.
+
+\subsection*{4: D2RQ Platform}
+The D2RQ server provides a basic but good readable UI. The documentation of the whole platform is very good. Security is not part of the project.
+
+\subsection*{5: Information Workbench}
+The workbench has a very well designed UI, supporting the user to achieve their tasks relatively simple. The system is very good readable, enabling the user to explore the functionality and fulfilling their task. The according documentation is well done for "standard" users, but might be not enough for advanced development. Security is per default activated.
+
+\subsection*{6: LDIF}
+LDIF does not have an explicit UI, therefore there can be no assessment of it done. Security is not part of the LDIF concept. The documentation is well done, but covers only simple topics, which could be problematic when running into problems while using the framework.
+
+\subsection*{7: Eclipse RDF4J}
+The framework provides a simple UI for the RDF4J server and workbench for managing the repositories, but using RDF4 means writing Java Code. Therefore UI can not be topic of examination here. The RDF4J repositories have simple user management, but are handled per default by plain text cookies in the browser. The documentation is detailed and in good condition.
+
+\subsection*{8: Apache Jena}
+Again, all statements from RDF4J are valid for Jena too. But in contrast to RDF4J Jena uses Apache Shiro for security. The server for Jena is called Fuseki.
+
+\subsection{Summary Group 2}
+Most of the solutions does not support an UI, except D2RQ and the information workbench. Security is only explicit mentioned in the information workbench and Apache Jena, RDF4J's default security is very basic. All solutions except LUCERO provide a good documentation.
+
+\section{Criteria Group 3: Data formats}
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|l|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+\textbf{Solution} & \textbf{Data formats}                                                                                                                        & \textbf{Note}                                                                                                                                                                  \\ \hline
+\textbf{1}        & Potential every possible format                                                                                                              & \begin{tabular}[c]{@{}l@{}}Every format needs its own \\ wrapper/consumer\end{tabular}                                                                                         \\ \hline
+\textbf{2}        & Default RSS \& XML                                                                                                                           & \begin{tabular}[c]{@{}l@{}}Additional data formats need \\ custom extractors\end{tabular}                                                                                      \\ \hline
+\textbf{3}        & \begin{tabular}[c]{@{}l@{}}Recipes for RDF, XML, HTML, \\ relational databases, Wrapper\end{tabular}                                         &                                                                                                                                                                                \\ \hline
+\textbf{4}        & Only relational databases                                                                                                                    &                                                                                                                                                                                \\ \hline
+\textbf{5}        & \begin{tabular}[c]{@{}l@{}}Table-base (csv, excel, groovy, \\ jdbc, rest, tsv, sparql etc), \\ tree-based (xml, json, etc), RDF\end{tabular} & \begin{tabular}[c]{@{}l@{}}Each data source needs a \\ configured data provider \\ which provides R2RML \\ (tabular datasources) and \\ XML mappings to RDF (see)\end{tabular} \\ \hline
+\textbf{6}        & \begin{tabular}[c]{@{}l@{}}N-Quads dumps, RDF/XML, \\ N-Triples, Turtle dumps,\\ dereferenced URIs, SPARQL\end{tabular}                      & \begin{tabular}[c]{@{}l@{}}Using LDSpider for \\ URI crawl import\end{tabular}                                                                                                 \\ \hline
+\textbf{7}        & Only RDF                                                                                                                                     &                                                                                                                                                                                \\ \hline
+\textbf{8}        & Only RDF \& OWL                                                                                                                              &                                                                                                                                                                                \\ \hline
+\end{tabular}
+}
+\caption{Comparison Criteria Group 3: Data formats}
+\label{tbl_comp_gr_3}
+\end{table}
+
+\subsection*{1: Euclid Project}
+The Euclid Project does theoretically supports every kind of formats, since it requires the developer to write a consumer for each data source, additionally enhanced by a wrapper to transform the data to RDF.
+
+\subsection*{2: LUCERO}
+Per default, the project supports only RSS and XML, but it provides also mechanism to integrate additional data extractors to the system, to enable addition data formats.
+
+\subsection*{3: Linked Data book}
+The book provides recipes for RDF, XML, HTML, relational databases and wrapper for existing applications and Web APIs. Additional data formats can probably integrated by adopting the recipes.
+
+\subsection*{4: D2RQ Platform}
+The scope of the platform are only the integration of relational databases.
+
+\subsection*{5: Information Workbench}
+The workbench does support a wide range of data format. For each data source, a data provider has to be configured. For table- and tree-based data formats are mappings available to transform the data to RDF.
+
+\subsection*{6: LDIF}
+LDIF provides four types of import jobs: Quad (import N-Quads dumps), Triple (import RDF/XML, N-Triples or Turtle dumps), Crawl (import by dereferencing URIs as RDF data, using the LDSpider Web Crawling Framework) and SPARQL Import Job (import by querying a SPARQL endpoint)
+
+\subsection*{7: Eclipse RDF4J}
+The framework is mainly meant for working with data from a RDF repository and not explicit for putting/creating data in it in the first place. 
+
+\subsection*{8: Apache Jena}
+Jena is also developed with the focus of accessing data rather than creating the data store, therefore only RDF and additionally OWL are supported.
+
+\subsection{Summary Group 3}
+The solutions offer a wide range of data types in total, the Euclid Project and the LD book provide recipes for various data types, the Information Workbench does this out-of-the-box. D2RQ, RDF4J and Jena are specialised solutions, focusing only on single data types.
+
+\section{Criteria Group 4: Linked Data Publishing Checklist}
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+\textbf{ID}                                              & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} \\ \hline
+Does your data set links to other data sets?                   & x          & x          & x          & x          & x          & x          & ?          & ?          \\ \hline
+Do you provide provenance metadata?                            & x          & ?          & x          & x          & x          & x          & x          & x          \\ \hline
+Do you provide licensing metadata?                             & x          & ?          & x          & x          & x          & x          & x          & x          \\ \hline
+Do you use terms from widely deployed vocabularies?            & x          & x          & x          & x          & x          & x          & ?          & ?          \\ \hline
+Are the URIs of proprietary vocabulary terms dereferenceable?  & x          & x          & x          & x          & x          & x          & ?          & ?          \\ \hline
+Do you map proprietary vocabulary terms to other vocabularies? & x          & x          & x          & x          & x          & x          & -          & -          \\ \hline
+Do you provide data set-level metadata?                        & x          & ?          & x          & x          & x          & x          & x          & x          \\ \hline
+Do you refer to additional access methods?                     & x          & -          & x          & x          & x          & x          & ?          & ?          \\ \hline
+\end{tabular}
+}
+\caption{Comparison Criteria Group 4: Linked Data Publishing Checklist}
+\label{tbl_comp_gr_4}
+\end{table}
+
+\subsection*{1: Euclid Project}
+Since of its generic nature, possible every point of the checklist can be fulfilled depending on the implementation. But the architecture does not require any of the points.
+
+\subsection*{2: LUCERO}
+LUCERO supports interlinking of data and through its Entity Name System different vocabularies. Since its bad documentation, it is unclear, if any metadata are provided (assumably not).
+
+\subsection*{3: Linked Data book}
+Since Heath et al. propose the checklist in this book, it is also implicit and explicit integrated into the described solutions.
+
+\subsection*{4: D2RQ Platform}
+The D2RQ server provides comprehensive support for metadata, easy customizable by templates. The D2RQ Mapping language is very powerful in handling and mapping various kinds of vocabulary.
+
+\subsection*{5: Information Workbench}
+The workbench does support metadata, licensing metadata can be provided by custom implementations. Interlinking is as well supported as different kinds of vocabularies.
+
+\subsection*{6: LDIF}
+The framework implicit provides provenance next to the triple store, links to other data sets and maps proprietary vocabulary terms. The LD book explicit mentions LDIF as good example, therefore it can easily be assumed, that the checklist is fulfilled.
+
+\subsection*{7: Eclipse RDF4J}
+Again, same as the Euclid Project, nearly every point of the checklist could be fulfilled by an implementation, especially the points about meta data. The schema/vocabulary/structure can be independent of the application and managed by another one, therefore it is out of the scope of RDF4J.
+
+\subsection*{8: Apache Jena}
+For Jena are the same arguments than for RDF4J valid: meta data are depended on the implementation, schema/vocabulary/structure can be out of the scope.
+
+\subsection{Summary Group 4}
+The checklist is overall well supported although it, again, is depending on the implementation of some of the solutions like Euclid, RDF4J or Jena. The last two are not managing the schema/vocabulary/structure by themselve, therefore the checklist is only partially applicable.
+
 \section{Summary}\label{comp_summary}
+
+Overall the concept of having multiple criteria worked, since some solution could not be evaluated in some categories like Usability. But in the overall view, the criteria helped to find a standardised way to describe the solutions and compare them. In the following section, the evaluation of each solution will be summarized to have a better overview.
+
+\subsection*{1: Euclid Project}
+Since the Euclid Project does only provide a generic architecture, most of the criteria are not directly applicable and are depending on the concrete implementation. Correctly applied it does however supports directly or indirectly maintainability, data freshness, flexibility, various kinds of data formats and the complete LD checklist. The architecture has no focus, neither explicit nor implicit, on security, therefore it needs to be done additionally if required. The documentation of the architecture is outstanding and very good done.
+Comparing to the other solutions, Euclid provides structures how other solutions or custom implementation can interact with each other. It can also be used as blueprint when combining other solutions.
+
+\subsection*{2: LUCERO}
+LUCERO is on one hand overall bad documented and outdated. On the other hand, it does support data freshness and flexibility per default due its mechanisms and can support various data formats by custom extractors. But due the first facts, it is not recommended any more to use LUCERO in a real application.
+
+\subsection*{3: Linked Data book}
+The summary for the LD book architecture is similar structured to the one of the Euclid project: good documentation but overall very generic. It can support maintainability, data freshness and flexibility if well implemented. The documentation is good and does include various recipes of data formats.
+A possible use case for it is the same as for Euclid: as blue print for combining other solutions.
+
+\subsection*{4: D2RQ Platform}
+The D2RQ is as mentioned a specialised tool for relational databases. According to it, it has only limited data format supports. But due its simple structure and focused usage, data freshness, maintainability and flexibility can be assured. D2RQ includes a good UI and documentation.
+This solution is ideal for a very specific use case, requiring only a relational database to publish as L(O)D, but solving it as an all-in-one solution without the need of further tool integration.
+
+\subsection*{5: Information Workbench}
+The Information Workbench is an all-in-solution, rich with functions and with a wide range of supported data formats. It can be used as a full stack solution with UI, integrating different data repositories. The documentation is well done but simple written, resulting maybe into problems handling more complex problems.
+The Workbench is ideal for an use case involving multiple data sources.  For smaller use cases, it could be an overloaded solution.
+
+\subsection*{6: LDIF}
+
+\subsection*{7: Eclipse RDF4J}
+
+\subsection*{8: Apache Jena}
