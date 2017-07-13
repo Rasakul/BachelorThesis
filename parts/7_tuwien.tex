@@ -1,6 +1,55 @@
-\chapter{Usage at TU Wien (RQ4)}
+\chapter{Usage at TU Wien (RQ4)}\label{ch:tuwien}
+
+In this section, the paper tries to answer research question 4: What a LOD solution for TU Wien might look like.
 
 \section{General}
+In order to answer the question, it is important to give a context, since it is difficult to give a general solution. From the previous study~\cite{baronyai_publishing_2016} conducted by the author it is known, that it is important for the stakeholders, that a solution is maintainable, provides fresh data and can deal with legacy data. In the following sections, three possible situations will be proposed, which can be a possible use case at TU Wien. For each situation the requirement will be defined and one of the investigated solution assigned.
+
 \section{Situation 1: Specialised Single Solution}
+\paragraph{Situation} It is only necessary, that one or a small number of data set needs to be published in a small scaled project. There is no need of a platform for exposing the data, a simple endpoint is enough.  
+
+\paragraph{Requirement}
+\begin{itemize}
+\item small scale
+\item small number of data sets
+\item specialised solution
+\item simple
+\end{itemize}
+
+\paragraph{Solution}
+\begin{itemize}
+\item \textbf{Option 1: D2RQ} \\
+If the data are in a relational database, D2RQ is the best solution for this use case.
+\item \textbf{Option 1: Jena + Euclid + LDIF} \\
+If the data are in another format than required for D2RQ, LDIF can be used to map the data to an uniform schema. To expose the data, Jena (or alternatively RDF4J) can be an option. For the overall architecture the proposed one of Euclid can be used to ensure maintainability.
+\end{itemize}
+
 \section{Situation 2: Function-rich Platform}
-\section{Situation 2: Complete Controlled Platform}
+\paragraph{Situation}
+It is necessary to publish various kinds of data sets and accessing them on a platform. The project is medium or big scaled, the platform needs additional features such as meta data, documentation or performance data. Licensing or Open Source does not play a role. The solution has to be easy to use and implement.
+
+\paragraph{Requirement}
+\begin{itemize}
+\item various kinds of data sets (in number and formats)
+\item medium/big scale
+\item platform with additional features
+\item easy to use/implement
+\end{itemize}
+
+\paragraph{Solution}
+For this situation is the \textbf{Information Workbench} suitable. The tool can integrate different kinds of data sources, combine the access points to a platform and providing additional features over modules. However, it needs a licensing if used outside an educational scope.
+
+\section{Situation 3: Complete Controlled Platform}
+\paragraph{Situation}
+Similar to situation 2, it is necessary to build platform combining different kinds of data sources. But in contrast, full control over the platform and the technology stack is necessary and no licensing is wanted. In exchange, the requirement "easy to use/implement" is relaxed.
+
+\paragraph{Requirement}
+\begin{itemize}
+\item various kinds of data sets (in number and formats)
+\item medium/big scale
+\item platform with additional features
+\item no licensing
+\end{itemize}
+
+\paragraph{Solution}
+For this situation no all-in-one solution of the proposed tools is suitable, instead the platform has to be developed by using a framework like \textbf{Jena or RDF4J} in combination with the \textbf{Euclid Project architecture}. If a mapping to an unified vocabulary is needed, \textbf{LDIF} can also be used. This project will probably consume more time than that one of situation 2.

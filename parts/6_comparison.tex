@@ -267,10 +267,14 @@ This solution is ideal for a very specific use case, requiring only a relational
 
 \subsection*{5: Information Workbench}
 The Information Workbench is an all-in-solution, rich with functions and with a wide range of supported data formats. It can be used as a full stack solution with UI, integrating different data repositories. The documentation is well done but simple written, resulting maybe into problems handling more complex problems.
-The Workbench is ideal for an use case involving multiple data sources.  For smaller use cases, it could be an overloaded solution.
+The Workbench is ideal for an use case involving multiple data sources. For smaller use cases, it could be an overloaded solution.
 
 \subsection*{6: LDIF}
+LDIF is due its concept on the one side a very flexible framework for handling different data sources with a wide range of vocabulary which also provides mechanism for keeping the retrieved data fresh. On the other hand the specialisation leads to a specific focus resulting in a limit number of supported data formats.
+An use case for LDIF can be managing different data sources on base of RDF, SPARQL or something similar. Since it is not an all-in-one solution, it can/should be used in combination with another tool responsible for exposing the data to the web.
 
 \subsection*{7: Eclipse RDF4J}
+RDF4J is completely different to the other investigated solutions, since it is a Java framework, requiring the developer to implement the given APIs. It is designed to handle a given repository and work with its data and/or expose them to the web. If an use case requires to publish data \emph{not} in RDF format, it could be good idea to use RDF4J in combination with a tool like LDIF.
 
 \subsection*{8: Apache Jena}
+As already mentioned Jena is similar to Sesame, but with the addition, that it provides support for OWL. It is also designed to handle a given repository and might be used in combination with something like LDIF.
