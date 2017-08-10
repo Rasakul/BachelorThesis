@@ -1,6 +1,6 @@
 \chapter{Comparison (RQ3)}\label{comparison}
 
-It this section the comparison itself will be done. In order to do that, first in section~\ref{comp_classification} the classification introduced in section~\ref{classification} will be applied the found solution. Then in section~\ref{comparison} the criteria defined in section~\ref{criteria} will be applied for each of them, divided in the defined groups. The summary in section~\ref{comp_summary} will then give in overview of the done comparison. 
+It this section the comparison itself will be done. In order to do that, first in section~\ref{comp_classification} the classification introduced in section~\ref{classification} will be applied to the found solution. Then in section~\ref{comparison} the criteria defined in section~\ref{criteria} will be applied for each of them, divided in the defined groups. The summary in section~\ref{comp_summary} will then give an overview of the done comparison. 
 
 An overview of the solutions to compare can be seen as recap in table~\ref{tb:cmp_overview}, in order to simplify the following tables, each of the solutions is given an ID to refer.
 
@@ -46,7 +46,7 @@ An overview of the solutions to compare can be seen as recap in table~\ref{tb:cm
 \label{tbl:cmp_classification}
 \end{table}
 
-\section{Criteria Group 1: Criteria from previous study}
+\section{Criteria Group 1: Criteria from Previous Study}
 
 \begin{table}[htbp]
 \centering
@@ -82,7 +82,7 @@ Similar to the Euclid Project, the Data Freshness and Flexibility is possible we
 The D2RQ Mapping Language can flexibly handle heterogeneous data as well as legacy data, the quality of Data Freshness depends on the configuration but is itself inherit of the concept.
 
 \subsection*{5: Information Workbench}
-Since the Workbench is designed to easily integrate different datasources, it can handle legacy data and ontology changes relatively good, depending on custom configurations. It might be a challenge to find the correct configurations, but the provided documentation well done.
+Since the Workbench is designed to easily integrate different datasources, it can handle legacy data and ontology changes relatively good, depending on custom configurations. It might be a challenge to find the correct configurations, but the provided documentation is well done.
 
 \subsection*{6: LDIF}
 LDIF is explicit designed to handle various data sources and vocabularies, mapping them to an uniform vocabulary. The framework further provides scheduler to keep the data as fresh as needed (running hourly, daily etc.)
@@ -146,7 +146,7 @@ Again, all statements from RDF4J are valid for Jena too. But in contrast to RDF4
 \subsection{Summary Group 2}
 Most of the solutions does not support an UI, except D2RQ and the information workbench. Security is only explicit mentioned in the information workbench and Apache Jena, RDF4J's default security is very basic. All solutions except LUCERO provide a good documentation.
 
-\section{Criteria Group 3: Data formats}
+\section{Criteria Group 3: Data Formats}
 
 \begin{table}[htbp]
 \centering
@@ -205,14 +205,14 @@ The solutions offer a wide range of data types in total, the Euclid Project and 
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \textbf{ID}                                              & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} \\ \hline
-Does your data set links to other data sets?                   & x          & x          & x          & x          & x          & x          & ?          & ?          \\ \hline
-Do you provide provenance metadata?                            & x          & ?          & x          & x          & x          & x          & x          & x          \\ \hline
-Do you provide licensing metadata?                             & x          & ?          & x          & x          & x          & x          & x          & x          \\ \hline
-Do you use terms from widely deployed vocabularies?            & x          & x          & x          & x          & x          & x          & ?          & ?          \\ \hline
-Are the URIs of proprietary vocabulary terms dereferenceable?  & x          & x          & x          & x          & x          & x          & ?          & ?          \\ \hline
-Do you map proprietary vocabulary terms to other vocabularies? & x          & x          & x          & x          & x          & x          & -          & -          \\ \hline
-Do you provide data set-level metadata?                        & x          & ?          & x          & x          & x          & x          & x          & x          \\ \hline
-Do you refer to additional access methods?                     & x          & -          & x          & x          & x          & x          & ?          & ?          \\ \hline
+Q1: Does your data set links to other data sets?                   & x          & x          & x          & x          & x          & x          & ?          & ?          \\ \hline
+Q2: Do you provide provenance metadata?                            & x          & ?          & x          & x          & x          & x          & x          & x          \\ \hline
+Q3: Do you provide licensing metadata?                             & x          & ?          & x          & x          & x          & x          & x          & x          \\ \hline
+Q4: Do you use terms from widely deployed vocabularies?            & x          & x          & x          & x          & x          & x          & ?          & ?          \\ \hline
+Q5: Are the URIs of proprietary vocabulary terms dereferenceable?  & x          & x          & x          & x          & x          & x          & ?          & ?          \\ \hline
+Q6: Do you map proprietary vocabulary terms to other vocabularies? & x          & x          & x          & x          & x          & x          & -          & -          \\ \hline
+Q7: Do you provide data set-level metadata?                        & x          & ?          & x          & x          & x          & x          & x          & x          \\ \hline
+Q8: Do you refer to additional access methods?                     & x          & -          & x          & x          & x          & x          & ?          & ?          \\ \hline
 \end{tabular}
 }
 \caption{Comparison Criteria Group 4: Linked Data Publishing Checklist}
@@ -251,7 +251,7 @@ The checklist is overall well supported although it, again, is depending on the 
 Overall the concept of having multiple criteria worked, since some solution could not be evaluated in some categories like Usability. But in the overall view, the criteria helped to find a standardised way to describe the solutions and compare them. In the following section, the evaluation of each solution will be summarized to have a better overview.
 
 \subsection*{1: Euclid Project}
-Since the Euclid Project does only provide a generic architecture, most of the criteria are not directly applicable and are depending on the concrete implementation. Correctly applied it does however supports directly or indirectly maintainability, data freshness, flexibility, various kinds of data formats and the complete LD checklist. The architecture has no focus, neither explicit nor implicit, on security, therefore it needs to be done additionally if required. The documentation of the architecture is outstanding and very good done.
+Since the Euclid Project does only provide a generic architecture, most of the criteria are not directly applicable and are depending on the concrete implementation. Correctly applied it does however supports directly or indirectly maintainability, data freshness, flexibility, various kinds of data formats and the complete LD checklist. The architecture has no focus, neither explicit nor implicit, on security, therefore it needs to be done additionally if required. The documentation of the architecture is outstanding and very well done.
 Comparing to the other solutions, Euclid provides structures how other solutions or custom implementation can interact with each other. It can also be used as blueprint when combining other solutions.
 
 \subsection*{2: LUCERO}
@@ -266,7 +266,7 @@ The D2RQ is as mentioned a specialised tool for relational databases. According 
 This solution is ideal for a very specific use case, requiring only a relational database to publish as L(O)D, but solving it as an all-in-one solution without the need of further tool integration.
 
 \subsection*{5: Information Workbench}
-The Information Workbench is an all-in-solution, rich with functions and with a wide range of supported data formats. It can be used as a full stack solution with UI, integrating different data repositories. The documentation is well done but simple written, resulting maybe into problems handling more complex problems.
+The Information Workbench is an all-in-one solution, rich with functionality and with a wide range of supported data formats. It can be used as a full stack solution with UI, integrating different data repositories. The documentation is well done but simple written, resulting maybe into problems handling more complex problems.
 The Workbench is ideal for an use case involving multiple data sources. For smaller use cases, it could be an overloaded solution.
 
 \subsection*{6: LDIF}

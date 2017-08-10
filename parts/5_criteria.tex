@@ -1,16 +1,16 @@
 \chapter{Criteria (RQ2)}\label{criteria}
 
-Since there are a wide variety of solutions, it is hard to find a set of criteria which can be applied to all in the same way in order to compare them. Therefore this paper will use 4 different criteria groups to ensure higher cover of them, even in case some of the criteria might not be applicable. Otherwise a comparison will be not possible.
+Since there are a wide variety of solutions, it is hard to find a set of criteria which can be applied to all in the same way in order to compare them. Therefore this paper will use 4 different criteria groups to ensure higher cover of them and allowing at the same time, that criteria might not be applicable for some solutions.
 
-\section{Criteria Group 1: Criteria from previous study}
+\section{Criteria Group 1: Criteria from Previous Study}
 
 \begin{table}[htb]
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|c|l|}
 \rowcolor[HTML]{EFEFEF} 
 \hline
 \textbf{Criteria} & \textbf{Scala} & \textbf{Explanation}                                 \\ \hline
-Maintainability   & +/-            & How much effort needs the maintenance?                        \\ \hline
+Maintainability   & +/-            & \begin{tabular}[c]{@{}l@{}}How much effort needs the maintenance?  \\ (less/much)\end{tabular} \\ \hline
 Data Freshness    & yes/ no        & Can it deal with new data?                        \\ \hline
 Flexibility       & yes/ no        & \begin{tabular}[c]{@{}l@{}}Can it deal with heterogenous and/or legacy data? \\ Can it deal with changes in the ontology?\end{tabular} \\ \hline
 \end{tabular}
@@ -26,7 +26,7 @@ The resulting criteria can be seen in table~\ref{tbl_cr_1_scala}.
 
 \begin{table}[htb]
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|c|l|}
 \hline
 \rowcolor[HTML]{EFEFEF} 
 \textbf{Criteria} & \textbf{Scala} & \textbf{Explanation}                                                                                                \\ \hline
@@ -44,7 +44,7 @@ In every software application and especially solutions designed for end-users, u
 
 The model can be seen in table~\ref{tbl_cr_2_scala}
 
-\section{Criteria Group 3: Data formats}
+\section{Criteria Group 3: Data Formats}
 
 An important aspect for the final decision for one of the tools can be the supported data format. It might be an (external) requirement or resulting from the fact of existing data. Since this highly depends on the context and the use case, this criteria will not be rated in any way, this paper will only line out the supported data formats.
 
@@ -56,24 +56,24 @@ An important aspect for the final decision for one of the tools can be the suppo
 \rowcolor[HTML]{EFEFEF} 
 \hline
 \multicolumn{1}{|c|}{\textbf{Criteria}}                        \\ \hline
-Does your data set links to other data sets?                   \\ \hline
-Do you provide provenance metadata?                            \\ \hline
-Do you provide licensing metadata?                             \\ \hline
-Do you use terms from widely deployed vocabularies?            \\ \hline
-Are the URIs of proprietary vocabulary terms dereferenceable?  \\ \hline
-Do you map proprietary vocabulary terms to other vocabularies? \\ \hline
-Do you provide data set-level metadata?                        \\ \hline
-Do you refer to additional access methods?                     \\ \hline
+Q1: Does your data set links to other data sets?                   \\ \hline
+Q2: Do you provide provenance metadata?                            \\ \hline
+Q3: Do you provide licensing metadata?                             \\ \hline
+Q4: Do you use terms from widely deployed vocabularies?            \\ \hline
+Q5: Are the URIs of proprietary vocabulary terms dereferenceable?  \\ \hline
+Q6: Do you map proprietary vocabulary terms to other vocabularies? \\ \hline
+Q7: Do you provide data set-level metadata?                        \\ \hline
+Q8: Do you refer to additional access methods?                     \\ \hline
 \end{tabular}
 \caption{Criteria Group 4: Linked Data Publishing Checklist}
 \label{tbl_cr_4_scala}
 \end{table}
 
-Since the whole paper is about Linked Data, it is important to analyse not only the tools itself but also the resulting LDs. In order to do that, the Linked Data Publishing Checklist by Heath et.al.~\cite{heath2011linked} will be used. Another alternative could be the the LOD defintion itself by Tim Berners-Lee~\cite{berners2006linked}, but this paper will presume, that a L(O)D tool will produce valid L(O)D. As one can expect from a checklist, the rating for this criteria will be only fulfilled/not fulfilled.
+Since the whole paper is about Linked Data, it is important to analyse not only the solutions itself but also the resulting LDs. In order to do that, the Linked Data Publishing Checklist by Heath et.al.~\cite{heath2011linked} will be used. Another alternative could be the the LOD defintion itself by Tim Berners-Lee~\cite{berners2006linked}, but this paper will presume, that a L(O)D tool will produce valid L(O)D. As one can expect from a checklist, the rating for this criteria will be only fulfilled/not fulfilled.
 
 The checklist can be seen in table~\ref{tbl_cr_4_scala}
 
-\section{End result}
+\section{End Result}
 
 Since this paper is designed to be used as a help for decisions, the aim can not be to find the "best" solution, therefore there will not be such a thing like an end result. E.g. for some situation a solution with bad usability can be more appropriate because of the supported data formats than a solution with a higher overall rating.
 

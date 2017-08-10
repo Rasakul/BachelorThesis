@@ -1,9 +1,11 @@
-\chapter{Methodology (RQ2)}\label{chap:methodology}
-\section{About the difficulty of comparing frameworks}\label{def:framework}
+\chapter{Methodology (RQ1)}\label{chap:methodology}
+\section{About the Difficulty of Comparing Solutions}\label{def:framework}
 
-\subsection{The term "framework"}
+One could expect, that this thesis may compare "frameworks". But there comes problems with this term. What actually is a "framework"? Is the term well-defined enough to clearly refer to a solution?
 
-In order to comparing frameworks of the field of Linked Data, a first step must be to define \emph{what} a framework actually is, since it is a very generic term. One way to define it could be the definition by Roberts and Johnson,~\cite{roberts1996evolving}:
+\subsection{The Term "Framework"}
+
+In order to use the term a first step must be to define \emph{what} a framework actually is, since it is a very generic term. One way to define it could be the definition by Roberts and Johnson,~\cite{roberts1996evolving}:
 
 \begin{quotation}
 Frameworks are reusable designs of all part of a software described by a set of abstract classes and the way instances of those collaborate
@@ -17,21 +19,23 @@ Frameworks model a specific domain or an important aspect thereof. They represen
 A framework comes with reusable implementations in the form of abstract and concrete class implementations. Abstract implementations are abstract classes that implement parts of a framework abstraction (as expressed by an abstract class or interface), but leave crucial implementation decisions to subclasses. [...]
 \end{quotation}
 
-Both of them refer frameworks as tools for coding, used when writing own applications. One of the most classical examples might be the Spring Framework in the Java world. In the mentioned project, Apache Jena and RDF4J mostly apply on this definition.
+Both of them refer frameworks as tools for coding, used when writing own applications. One of the most classical examples might be the Spring Framework in the Java world. In the mentioned projects, Apache Jena and RDF4J mostly apply on this definition.
 
 But the problem is here, that the term is not always used and understand in this way, LDIF and the Silk frameworks define themselves as such, but providing in facts a set of tools without necessarily needing coding to work with them (except configuration files). Others may see tools like the Information Workbench or D2RQ as a framework for publishing.
 
 On a higher level, the architectures proposed in section~\ref{arch_frameworks} might be seen as a high-level or meta-framework. And since the proposed tools in the other sections (partially) are using these architectures, one could argue, that they therefore are also frameworks.
 
-\subsection{Defining the limits}
+It can be seen, that is actually problematic to use this term in the context of this thesis since it is too broad and not well-defined. In order to solve this issue, the term "solution" will be used to abstract the term and referring either to "tool", "framework" or "all-in-one solution".
 
-Next to the general problem about the term "framework", another problem is to set the borders of the examine topic. Since the paper aims to compare "Linked Data frameworks", the goal is to cover the whole process of publishing Linked Data, from the bottom persistence layer of accessing existing data, transforming data formats (e.g. relational to RDF), over cleaning and interlinking the data, over storing them in a triple store, up to making them available over an interface like SPARQL.
+\subsection{Defining the Limits}
+
+Next to the general problem about the term "framework", another problem is to set the borders of the examine topic. As mentioned in the introduction this thesis aims to compare LOD solutions, the goal is to cover the whole process of publishing Linked Data, from the bottom persistence layer of accessing existing data, transforming data formats (e.g. relational to RDF), over cleaning and interlinking the data, over storing them in a triple store, up to making them available over an interface like SPARQL.
 
 But there are not many tools/frameworks covering the whole process and supporting different data formats (e.g. relational data and CSV) at the same time. There are some tools like D2RQ only focusing on specific data formats, but providing the full stack, some tools like LDIF only focusing on a specific part of the process, without e.g. providing capabilities for SPARQL endpoints.
 
 The best way is maybe using a stack of different tools to cover the whole workflow, combining them like Silk is integrated in LDIF. Or using the generic architecture, coding an own application and using partially the proposed tools.
 
-But covering different areas, it is difficult to actually compare them. How to compare a persistence framework with a GUI framework?
+But covering different areas, it is difficult to actually compare them. How to compare a persistence framework with a GUI framework? In order to handle this problem, a classification system will be introduced in section~\ref{classification} and the criteria introduced in section~\ref{criteria} will take this difficulty into account.
 
 \section{Used Methodology Literature Study}\label{meth_study}
 In order to answer RQ1, a literature study was conducted, but since the scope is difficult to define as described in section~\ref{def:framework}, it was not a pure study. As the aim of this paper is to compare \textit{common} frameworks and \textit{best practices}, it would be not sufficient to review every possible paper about a LOD framework or tool, therefore another approach was chosen: deriving candidates from projects. In order to do that, the following process was used:
@@ -40,7 +44,7 @@ In order to answer RQ1, a literature study was conducted, but since the scope is
 \item Identify \& find a LOD application/project, ignoring the success of it
 \item Find public documentation and/or scientific work of it
 \item Analyse used technology, add as candidate if appropriate and if not disadvised
-\item Classify candidates (see~\ref{classification}
+\item Classify candidates (see~\ref{classification})
 \item Analyse reference work for possible input for 1.)
 \item Analyse reference work of tool/framework at its documentation
 \end{enumerate}
@@ -48,22 +52,23 @@ In order to answer RQ1, a literature study was conducted, but since the scope is
 Using this approach led to a variety of candidates, which will be listed in section~\ref{overview}. The candidates from section~\ref{excluded} were mostly excluded because of step 2.), which ensured a better base for the following comparison.
 
 \section{Classification}\label{classification}
-Resulting from~\ref{def:framework} different classifications were introduced to find classification-based criteria and to balance out the vast variation of the results. The classifications are:
+Resulting from~\ref{def:framework} different classifications were introduced to find classification-based criteria and to balance out the vast variation of the results. The classifications can be seen in table~\ref{tbl_classification_def}.
 
-\begin{table}[h]
+\begin{table}[htb]
 \centering
 \begin{tabular}{|l|l|}
 \hline
 \textbf{Class}              & \textbf{Detail}                                                                                                                                                                                                                        \\ \hline
-\textbf{Architecture}       & \begin{tabular}[c]{@{}l@{}}A general architecture without concrete technology. \\ A framework/tool of this class can be used in combination \\ of any other class.\end{tabular}                                                        \\ \hline
-\textbf{Full-Stack}         & \begin{tabular}[c]{@{}l@{}}A tool/framework which covers the whole stack and \\ therefore does not need another component. \\ An "All-In-One" Solution\end{tabular}                                                                    \\ \hline
-\textbf{Presentation layer} & \begin{tabular}[c]{@{}l@{}}A tool/framework which only covers the presentation or \\ UI layer and therefore depends on other component \\ .Managing how LOD can be accessed from outside \\ and how the data are exposed.\end{tabular} \\ \hline
-\textbf{Business Layer}     & \begin{tabular}[c]{@{}l@{}}A tool/framework which only covers the business layer \\ and therefore depends on other component. \\ Managing how LOD are processed.\end{tabular}                                                          \\ \hline
-\textbf{Data Access Layer}  & \begin{tabular}[c]{@{}l@{}}A tool/framework which only covers the data access layer \\ and therefore depends on other component. \\ Managing how LOD are stored and accessed by the application.\end{tabular}                          \\ \hline
+\textbf{Architecture}       & \begin{tabular}[c]{@{}l@{}}A general architecture without concrete technology. \\ A solution of this class can be used in combination \\ of any other class.\end{tabular}                                                        \\ \hline
+\textbf{Full-Stack}         & \begin{tabular}[c]{@{}l@{}}A solution which covers the whole stack and \\ therefore does not need another component. \\ An "All-In-One" Solution\end{tabular}                                                                    \\ \hline
+\textbf{Presentation layer} & \begin{tabular}[c]{@{}l@{}}A solution which only covers the presentation or \\ UI layer and therefore depends on other component.  \\ Managing how LOD can be accessed from outside \\ and how the data are exposed.\end{tabular} \\ \hline
+\textbf{Business Layer}     & \begin{tabular}[c]{@{}l@{}}A solution which only covers the business layer \\ and therefore depends on other components. \\ Managing how LOD are processed.\end{tabular}                                                          \\ \hline
+\textbf{Data Access Layer}  & \begin{tabular}[c]{@{}l@{}}A solution which only covers the data access layer \\ and therefore depends on other components. \\ Managing how LOD are stored and accessed \\ by the application.\end{tabular}                          \\ \hline
 \end{tabular}
-\label{tb:classification}
+\label{tbl_classification_def}
+\caption{Overview of the Classification}
 \end{table}
 
-The Classifications are based on the idea, that a majority of applications are using in one way or another a variation or parts of the three layer architecture style, with components responsible for either UI, Business or Data Access. This does \textit{not} necessarily mean, that they use the full concepts of this architecture or even implementing this style. It is only assumed that a component have a responsibility mappable to one of the layers. Accordingly it is assumed, that a tool/framework can be associated with one of these responsibilities.
+The Classifications are based on the idea, that a majority of applications are using in one way or another a variation or parts of the three layer architecture style, with components responsible for either UI, Business or Data Access. This does \textit{not} necessarily mean, that they use the full concepts of this architecture or even implementing this style. It is only assumed that a component have a responsibility mappable to one of the layers. Accordingly it is assumed, that a solution can be associated with one of these responsibilities.
 
-It is arguable, if the differentiation between "Full-Stack" and labelling a framework with the three layer class is necessary. The additional "Full-Stack" class was added to emphasize the "All-In-One" approach of such a tool, meaning that all components are provided, no further components are need. This also means, that the included components of the different responsibilities are either harmonized to each other or do not differentiate between these responsibilities. On the other side labelling a tool with the three layer classes, does not implicit this and can also mean, that the support of each of this layer can be optional.
+It is arguable, if the differentiation between "Full-Stack" and labelling a solution with the three layer class is necessary. The additional "Full-Stack" class was added to emphasize the "All-In-One" approach of such a solution, meaning that all components are provided, no further components are need. This also means, that the included components of the different responsibilities are either harmonized to each other or do not differentiate between these responsibilities. On the other side labelling a tool with the three layer classes, does not implicit this and can also mean, that the support of each of this layer can be optional.

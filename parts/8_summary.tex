@@ -1,2 +1,72 @@
-\chapter{Summary and future work}\label{ch:summary}
-\todo{Enter your text here.}
+\chapter{Conclusion And Future Work}\label{ch:summary}
+
+The overall goal of this thesis was to compare common LOD solutions and give TU Wien a guideline for choosing and developing such an application. The concrete research question was: 
+
+\textbf{RQ:} \textit{How do common LOD solutions compare against each?}
+\begin{enumerate}
+\item \textbf{RQ1:} What are existing LOD solutions?
+\item \textbf{RQ2:} What are criteria to compare solutions?
+\item \textbf{RQ3:} How do they compare against each other?
+\item \textbf{RQ4:} What can be a solution for TU Wien?
+\end{enumerate}
+
+The first part of this thesis investigated the first research question by conducting a literature study and discussing the term "framework" and why it was not used instead of the term "solution" (see subsection~\ref{def:framework}). The methodology can be seen in chapter~\ref{chap:methodology}, the results in section~\ref{overview}.
+
+In the second part (section~\ref{criteria}, a set of criteria was developed in order to compare the found solutions and answer research question 2. These criteria were then used to investigate the found solutions under the aspects of them. The results can be found in section~\ref{comparison}.
+
+In the final part, the found solutions were examined on the usefulness for TU Wien, in section~\ref{ch:tuwien}.  
+
+\section{Conclusion}
+
+In the following subsections each research question will be addressed and revisited :
+
+\subsection{Existing LOD solutions}
+
+Using the method of a literature review, eight solution were found for this work: 
+
+\begin{itemize}
+\itemsep0pt
+\item Euclid Project
+\item LUCERO
+\item Linked Data Book
+\item D2RQ Platform
+\item LDIF
+\item Eclipse RDF4J
+\item Apache Jena
+\end{itemize}
+
+Of the found candidates a few were discarded since they were not (public) documented or too generic.
+
+\subsection{Comparision Criteria}
+
+Since the found solutions showed a high variation, it was necessary to find a set of criteria which can be partially not applicable while still meaningful in their entirety. Therefore four criteria group were defined: \textit{Criteria from a Previous Study, Usability, Data formats and the Linked Data Checklist}. Since the aim of this thesis is not to find the "best" solution, the criteria were not weighted and had only a scala as assessment instead of e.g. a point system.
+
+\subsection{Comparision}
+
+As expected, some criteria (especially Usability) were not applicable for some solutions, but the concept of multiple criteria groups worked out. The results (an overview of the full results can be seen in the Appendix) in short are:
+
+
+\begin{itemize}
+
+\item The Euclid Project was too generic to give a definite evaluation for the most criteria, since most of it is depending on an actual implementation. Correctly applied it does however supports directly or indirectly maintainability, data freshness, flexibility, various kinds of data formats and the complete LD checklist.
+
+\item LUCERO was found outdated and bad documented, it is not recommended to use it (any more).
+
+\item Similar to Euclid, the Linked Data Book was too generic to find explicit assessments for the criteria, too much is depending on the actual implementation.
+
+\item The D2RQ platform has (due its nature as specialised tool) only limited support for data formats, but received a good evaluation in the other criteria groups.
+
+\item As an all-in-one solution the Information Workbench has good results in all groups. It has to be noted, that this tool requires licensing when used outside an educational scope.
+
+\item LDIF is due its concept on the one side a very flexible framework for handling different data sources with a wide range of vocabulary. On the other hand the specialisation leads to a specific focus resulting in a limit number of supported data formats. It is recommended to use this solution in specialised situation or in combination with other solutions like Jena or RDF4J.
+
+\item Eclipse RDF4J and Apache Jena both are very different to the other solutions, they are Java frameworks, requiring to write code against their API. For both the results of the comparison highly depend on the actual implementation.
+\end{itemize}
+
+\subsection{Solution For TU Wien}
+
+For the TU Wien a set of situations were developed in order to find a context for which a solution can be recommended. It was found, that the "ideal" solution, based on the given situations, requirements and stakeholders, would be an self-developed platform, using either Jena or RDF4J (or a similar tool) while using the Euclid architecture as a blueprint and LDIF if a mapping is necessary.
+
+\section{Future Work}
+
+It is recommended to extend the list of possible solutions and applying the given set of criteria in order to find a suitable solution for TU Wien. The found combination of Jena/RDF4J with Euclid and LDIF might be a way of developing a platform, but it is not necessary to use this \emph{exact} combination. Nevertheless it should be keep in mind, that this way is more extensive than using e.g. the Information Workbench. But as an advantage, the full platform can be controlled.

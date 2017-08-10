@@ -1,0 +1,105 @@
+\chapter{Appendix}
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|l|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+\textbf{ID} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Arch-\\ itecture\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Full-\\ Stack\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Present-\\ ation \\ layer\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Business \\ Layer\end{tabular}}} & \multicolumn{1}{l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Data \\ Access \\ Layer\end{tabular}}} & \textbf{Note} \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Euclid \\Project\end{tabular}} & x & & & x & x & \\ \hline
+\textbf{LUCERO} & x & & & x & x & \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Linked\\ Data\\ book\end{tabular}} & x & & & x & x & \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}D2RQ \\Platform\end{tabular}} & & & x & x & x & \begin{tabular}[c]{@{}l@{}}D2R Server includes HTML \\ view and SPARQL endpoints\end{tabular} \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Information \\Workbench\end{tabular}} & & x & & & & \\ \hline
+\textbf{LDIF} & & & & x & x & \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Eclipse \\RDF4J\end{tabular}} & & & & x & x & \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Apache \\Jena\end{tabular}} & & & x & x & x & \begin{tabular}[c]{@{}l@{}}Provides optionally SPARQL \\ endpoints and stand-alone \\ server with Jetty\end{tabular} \\ \hline
+\end{tabular}
+}
+\caption{Classification}
+\label{app:cmp_classification}
+\end{table}
+
+\begin{sidewaystable}
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+\textbf{ID} & \textbf{\begin{tabular}[c]{@{}c@{}}Maintain-\\ ability\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Data \\ Freshness\end{tabular}} & \textbf{Flexibility} & \textbf{\begin{tabular}[c]{@{}c@{}}Effective-\\ ness\end{tabular}} & \textbf{Efficiency} & \textbf{\begin{tabular}[c]{@{}c@{}}Satis- \\ faction\end{tabular}} & \textbf{Security} & \textbf{\begin{tabular}[c]{@{}c@{}}Learn-\\ ability\end{tabular}} \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Euclid \\Project\end{tabular}} & + & yes & yes & N.A. & N.A. & N.A. & - & + \\ \hline
+\textbf{LUCERO} & ? & yes & yes & N.A. & N.A. & N.A. & - & - \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Linked\\ Data\\ book\end{tabular}} & + & yes & yes & N.A. & N.A. & N.A. & - & + \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}D2RQ \\Platform\end{tabular}} & + & yes & yes & + & + & + & - & + \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Information \\Workbench\end{tabular}} & ? & yes & yes & + & + & + & + & + \\ \hline
+\textbf{LDIF} & + & yes & yes & N.A. & N.A. & N.A. & - & + \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Eclipse \\RDF4J\end{tabular}} & $\sim$ & ? & yes & N.A. & N.A. & N.A. & $\sim$ & + \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Apache \\Jena\end{tabular}} & $\sim$ & ? & yes & N.A. & N.A. & N.A. & + & + \\ \hline
+\end{tabular}
+\caption{Comparison group 1 \& 2}
+\label{app:gr_1_2}
+\end{sidewaystable}
+
+\begin{sidewaystable}
+\centering
+\begin{tabular}{|l|l|c|c|c|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+\textbf{ID} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\textbf{\begin{tabular}[c]{@{}c@{}}Data \\ formats\end{tabular}}} & \textbf{Q1} & \textbf{Q2} & \textbf{Q3} & \textbf{Q4} & \textbf{Q5} & \textbf{Q6} & \textbf{Q7} & \textbf{Q8} \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Euclid \\Project\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Potential every \\ possible format\end{tabular} & x & x & x & x & x & x & x & x \\ \hline
+\textbf{LUCERO} & \begin{tabular}[c]{@{}l@{}}Default RSS \& \\ XML\end{tabular} & x & ? & x & x & x & x & x & x \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Linked \\Data \\book\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Recipes for RDF, \\ XML, HTML, \\ relational \\ databases, \\ Wrapper\end{tabular} & x & ? & x & x & x & x & x & x \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}D2RQ \\Platform\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Only relational \\databases\end{tabular} & x & x & x & x & x & x & ? & ? \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Information \\Workbench\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Table-based (csv, \\ excel, groovy,jdbc, \\ rest, tsv, sparql \\ etc), tree-based \\ (xml, json, etc), \\ RDF\end{tabular} & x & x & x & x & x & x & ? & ? \\ \hline
+\textbf{LDIF} & \begin{tabular}[c]{@{}l@{}}N-Quads dumps, \\ RDF/XML,N-\\ Triples, Turtle \\ dumps, \\ dereferenced\\ URIs, SPARQL\end{tabular} & x & x & x & x & x & x & - & - \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Eclipse \\RDF4J\end{tabular}} & Only RDF & x & ? & x & x & x & x & x & x \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Apache \\Jena\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Only RDF \& \\ OWL\end{tabular} & x & - & x & x & x & x & ? & ? \\ \hline
+\end{tabular}
+\caption{Comparison group 3 \& 4}
+\label{app:gr_3_4}
+\end{sidewaystable}
+
+\begin{table}[hbtp]
+\centering
+\resizebox{\textwidth}{!}{%
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\rowcolor[HTML]{EFEFEF} 
+		\textbf{Scenario} & \textbf{Requirement} & \textbf{Solution} \\ \hline
+		%%
+		\textbf{\begin{tabular}[c]{@{}l@{}}Specialised \\ Single Solution\end{tabular}} & 
+		\begin{tabular}[c]{@{}l@{}}
+			-) small scale \\ 
+			-) small number of data sets \\ 
+			-) specialised solution \\ 
+			-) simple
+		\end{tabular} & 
+		\begin{tabular}[c]{@{}l@{}}
+			-) Option 1: D2RQ \\ 
+			-) Option 2: Jena + Euclid \\ (+ LDIF)
+		\end{tabular} \\ \hline
+		%%
+		\textbf{\begin{tabular}[c]{@{}l@{}}Function-rich \\ Platform\end{tabular}} & 
+		\begin{tabular}[c]{@{}l@{}}
+			-) various kinds of data sets \\ (in number and formats) \\ 
+			-) medium scale \\ 
+			-) platform with additional features \\ 
+			-) easy to use/implement
+		\end{tabular} & 
+		Information Workbench \\ \hline
+		%%
+		\textbf{\begin{tabular}[c]{@{}l@{}}Complete \\ Controlled \\ Platform\end{tabular}} & 
+		\begin{tabular}[c]{@{}l@{}}
+			-) various kinds of data sets \\ (in number and formats) \\ 
+			-) medium scale \\ 
+			-) platform with additional features \\ 
+			-) no licensing \\
+			-) Open Source
+		\end{tabular} & 
+		\begin{tabular}[c]{@{}l@{}}
+			Jena/RDF4J + Euclid \\ (+ LDIF)
+		\end{tabular} \\ \hline
+	\end{tabular}%
+}
+\caption{Summary of Scenarios \& proposed solutions for TU Wien}
+\end{table}

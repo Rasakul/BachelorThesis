@@ -26,11 +26,12 @@
 \usepackage[acronym,toc]{glossaries} % Enables the generation of glossaries and lists fo acronyms. This package has to be included last.
 
 \usepackage{graphicx,rotating}
+\usepackage{csquotes}
 
 % Define convenience functions to use the author name and the thesis title in the PDF document properties.
 \newcommand{\authorname}{Lukas Baronyai} % The author name without titles.
-\newcommand{\thesistitle}{Comparison of LOD Frameworks} % The title of the thesis. The English version should be used, if it exists.
-\newcommand{\thesissubtitle}{Finding evaluation of existing frameworks} % The subtitle of the thesis. The English version should be used, if it exists.
+\newcommand{\thesistitle}{Comparison of LOD Solutions} % The title of the thesis. The English version should be used, if it exists.
+\newcommand{\thesissubtitle}{Finding evaluation of existing solutions and giving a guide to use at TU Wien} % The subtitle of the thesis. The English version should be used, if it exists.
 
 % Set PDF document properties
 \hypersetup{
@@ -38,8 +39,8 @@
     linkbordercolor = {Melon},                % The color of the borders of boxes around crosslinks (optional).
     pdfauthor       = {\authorname},          % The author's name in the document properties (optional).
     pdftitle        = {\thesistitle},         % The document's title in the document properties (optional).
-    pdfsubject      = {Subject},              % The document's subject in the document properties (optional).
-    pdfkeywords     = {a, list, of, keywords} % The document's keywords in the document properties (optional).
+    pdfsubject      = {Comparison of LOD Frameworks},              % The document's subject in the document properties (optional).
+    pdfkeywords     = {LOD, linked data, linked open data, comparison, framework, LDIF, Apache, Jena, Euclid, LUCERO, Linked Data book, D2RQ, Information Workbench, Eclipse, RDF4J} % The document's keywords in the document properties (optional).
 }
 
 \setpnumwidth{2.5em}        % Avoid overfull hboxes in the table of contents (see memoir manual).
@@ -48,24 +49,22 @@
 \nonzeroparskip             % Create space between paragraphs (optional).
 \setlength{\parindent}{0pt} % Remove paragraph identation (optional).
 
-\makeindex      % Use an optional index.
-\makeglossaries % Use an optional glossary.
+%\makeindex      % Use an optional index.
+%\makeglossaries % Use an optional glossary.
 %\glstocfalse   % Remove the glossaries from the table of contents.
 
 % Set persons with 4 arguments:
 %  {title before name}{name}{title after name}{gender}
 %  where both titles are optional (i.e. can be given as empty brackets {}).
 \setauthor{}{\authorname}{}{male}
-\setadvisor{Pretitle}{Forename Surname}{Posttitle}{male}
+\setadvisor{Prof. Dr.}{Stefan Biffl}{}{male}
 
 % For bachelor and master theses:
-\setfirstassistant{Pretitle}{Forename Surname}{Posttitle}{male}
-\setsecondassistant{Pretitle}{Forename Surname}{Posttitle}{male}
-\setthirdassistant{Pretitle}{Forename Surname}{Posttitle}{male}
+\setfirstassistant{MSc., PhD}{Marta Sabou}{}{female}
 
 % Required data.
-\setaddress{Längenfeldgasse 28/8/5, 1120 Wien}
-\setregnumber{1326526}
+\setaddress{Huttengasse 51/10, 1160 Wien}
+\setregnumber{01326526}
 \setdate{\the\day}{\the\month}{\the\year} % Set date with 3 arguments: {day}{month}{year}.
 \settitle{\thesistitle}{\thesistitle} % Sets English and German version of the title (both can be English or German).
 \setsubtitle{\thesissubtitle}{\thesissubtitle} % Sets English and German version of the subtitle (both can be English or German).
@@ -92,7 +91,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{parts/0_1_acknowledgements.tex}
+%\input{parts/0_1_acknowledgements.tex}
 \input{parts/0_2_abstract.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -124,6 +123,7 @@
 \input{parts/6_comparison.tex}
 \input{parts/7_tuwien.tex}
 \input{parts/8_summary.tex}
+\input{parts/9_appendix.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -138,23 +138,13 @@
 %\cleardoublepage % Start list of tables on the next empty right hand page.
 \listoftables % Starred version, i.e., \listoftables*, removes the toc entry.
 
-% Use an optional list of alogrithms.
-%\listofalgorithms
-%\addcontentsline{toc}{chapter}{List of Algorithms}
-
-% Add an index.
-\printindex
-
-% Add a glossary.
-\printglossaries
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Add a bibliography.
 %\bibliographystyle{alpha}
 %\bibliography{bibliography}
 
-%\addcontentsline{toc}{chapter}{References}
+%\addcontentsline{toc}{chapter}{Appendix}
 
 \printbibliography[title={References to refereed scientific work}, keyword=refsw]
 
