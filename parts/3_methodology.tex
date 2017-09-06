@@ -1,5 +1,5 @@
 \chapter{Methodology (RQ1)}\label{chap:methodology}
-\section{About the Difficulty of Comparing Solutions}\label{def:framework}
+\section{About The Difficulty Of Comparing Solutions}\label{def:framework}
 
 One could expect, that this thesis may compare "frameworks". But there comes problems with this term. What actually is a "framework"? Is the term well-defined enough to clearly refer to a solution?
 
@@ -27,9 +27,9 @@ On a higher level, the architectures proposed in section~\ref{arch_frameworks} m
 
 It can be seen, that is actually problematic to use this term in the context of this thesis since it is too broad and not well-defined. In order to solve this issue, the term "solution" will be used to abstract the term and referring either to "tool", "framework" or "all-in-one solution".
 
-\subsection{Defining the Limits}
+\subsection{Defining The Limits}
 
-Next to the general problem about the term "framework", another problem is to set the borders of the examine topic. As mentioned in the introduction this thesis aims to compare LOD solutions, the goal is to cover the whole process of publishing Linked Data, from the bottom persistence layer of accessing existing data, transforming data formats (e.g. relational to RDF), over cleaning and interlinking the data, over storing them in a triple store, up to making them available over an interface like SPARQL.
+Next to the general problem about the term "framework", another problem is to set the borders of the examine topic. As mentioned in the introduction this thesis aims to compare LD solutions, the goal is to cover the whole process of publishing Linked Data, from the bottom persistence layer of accessing existing data, transforming data formats (e.g. relational to RDF), over cleaning and interlinking the data, over storing them in a triple store, up to making them available over an interface like SPARQL.
 
 But there are not many tools/frameworks covering the whole process and supporting different data formats (e.g. relational data and CSV) at the same time. There are some tools like D2RQ only focusing on specific data formats, but providing the full stack, some tools like LDIF only focusing on a specific part of the process, without e.g. providing capabilities for SPARQL endpoints.
 
@@ -37,11 +37,11 @@ The best way is maybe using a stack of different tools to cover the whole workfl
 
 But covering different areas, it is difficult to actually compare them. How to compare a persistence framework with a GUI framework? In order to handle this problem, a classification system will be introduced in section~\ref{classification} and the criteria introduced in section~\ref{criteria} will take this difficulty into account.
 
-\section{Used Methodology Literature Study}\label{meth_study}
-In order to answer RQ1, a literature study was conducted, but since the scope is difficult to define as described in section~\ref{def:framework}, it was not a pure study. As the aim of this paper is to compare \textit{common} frameworks and \textit{best practices}, it would be not sufficient to review every possible paper about a LOD framework or tool, therefore another approach was chosen: deriving candidates from projects. In order to do that, the following process was used:
+\section{Methodology Of The Literature Study}\label{meth_study}
+In order to answer RQ1, a literature study was conducted, but since the scope is difficult to define as described in section~\ref{def:framework}, it was not a pure study. As the aim of this paper is to compare \textit{common} frameworks and \textit{best practices}, it would be not sufficient to review every possible paper about a LD framework or tool, therefore another approach was chosen: deriving candidates from projects. In order to do that, the following process was used:
 
 \begin{enumerate}
-\item Identify \& find a LOD application/project, ignoring the success of it
+\item Identify \& find a LD application/project, ignoring the success of it
 \item Find public documentation and/or scientific work of it
 \item Analyse used technology, add as candidate if appropriate and if not disadvised
 \item Classify candidates (see~\ref{classification})
@@ -51,8 +51,7 @@ In order to answer RQ1, a literature study was conducted, but since the scope is
 
 Using this approach led to a variety of candidates, which will be listed in section~\ref{overview}. The candidates from section~\ref{excluded} were mostly excluded because of step 2.), which ensured a better base for the following comparison.
 
-\section{Classification}\label{classification}
-Resulting from~\ref{def:framework} different classifications were introduced to find classification-based criteria and to balance out the vast variation of the results. The classifications can be seen in table~\ref{tbl_classification_def}.
+\section{A Classification System}\label{classification}
 
 \begin{table}[htb]
 \centering
@@ -61,13 +60,16 @@ Resulting from~\ref{def:framework} different classifications were introduced to 
 \textbf{Class}              & \textbf{Detail}                                                                                                                                                                                                                        \\ \hline
 \textbf{Architecture}       & \begin{tabular}[c]{@{}l@{}}A general architecture without concrete technology. \\ A solution of this class can be used in combination \\ of any other class.\end{tabular}                                                        \\ \hline
 \textbf{Full-Stack}         & \begin{tabular}[c]{@{}l@{}}A solution which covers the whole stack and \\ therefore does not need another component. \\ An "All-In-One" Solution\end{tabular}                                                                    \\ \hline
-\textbf{Presentation layer} & \begin{tabular}[c]{@{}l@{}}A solution which only covers the presentation or \\ UI layer and therefore depends on other component.  \\ Managing how LOD can be accessed from outside \\ and how the data are exposed.\end{tabular} \\ \hline
-\textbf{Business Layer}     & \begin{tabular}[c]{@{}l@{}}A solution which only covers the business layer \\ and therefore depends on other components. \\ Managing how LOD are processed.\end{tabular}                                                          \\ \hline
-\textbf{Data Access Layer}  & \begin{tabular}[c]{@{}l@{}}A solution which only covers the data access layer \\ and therefore depends on other components. \\ Managing how LOD are stored and accessed \\ by the application.\end{tabular}                          \\ \hline
+\textbf{Presentation layer} & \begin{tabular}[c]{@{}l@{}}A solution which only covers the presentation or \\ UI layer and therefore depends on other component.  \\ Managing how LD can be accessed from outside \\ and how the data are exposed.\end{tabular} \\ \hline
+\textbf{Business Layer}     & \begin{tabular}[c]{@{}l@{}}A solution which only covers the business layer \\ and therefore depends on other components. \\ Managing how LD are processed.\end{tabular}                                                          \\ \hline
+\textbf{Data Access Layer}  & \begin{tabular}[c]{@{}l@{}}A solution which only covers the data access layer \\ and therefore depends on other components. \\ Managing how LD are stored and accessed \\ by the application.\end{tabular}                          \\ \hline
 \end{tabular}
-\label{tbl_classification_def}
+\centering
 \caption{Overview of the Classification}
+\label{the_label}
 \end{table}
+
+Resulting from~\ref{def:framework} different classifications were introduced to find classification-based criteria and to balance out the vast variation of the results. The classifications can be seen in table~\ref{the_label}.
 
 The Classifications are based on the idea, that a majority of applications are using in one way or another a variation or parts of the three layer architecture style, with components responsible for either UI, Business or Data Access. This does \textit{not} necessarily mean, that they use the full concepts of this architecture or even implementing this style. It is only assumed that a component have a responsibility mappable to one of the layers. Accordingly it is assumed, that a solution can be associated with one of these responsibilities.
 

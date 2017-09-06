@@ -1,4 +1,4 @@
-\chapter{Overview of solutions (RQ1)}\label{overview}
+\chapter{Overview Of LD Solutions (RQ1)}\label{overview}
 In order to compare solutions an understanding of existing solutions is necessary. This section will look at existing solutions, what kind of solutions they are, which of them can be used for this paper and which must be excluded. Furthermore, this section aims to understand how solutions look like and will examine the architecture of them.
 
 \section{Architectures Of Frameworks}\label{arch_frameworks}
@@ -47,7 +47,7 @@ The outcome of this project is a a range of learning materials, fragmented into 
 	
 \end{enumerate}
 
-For this paper module 3 and 5~\footnote{~\cite{euclid:chap5}} are the most interesting. Module 3 describes some useful technologies for various steps on the way of exposing L(O)D, but module 5 introduce a high level architecture and some patterns, how a L(O)D application might look like (see ~\cite{euclid:chap5} for details). In detail, they provide a three-tier architecture (see figure~\ref{euclid_architecture} and three architecture patterns.
+For this paper module 3 and 5~\footnote{~\cite{euclid:chap5}} are the most interesting. Module 3 describes some useful technologies for various steps on the way of exposing LD, but module 5 introduce a high level architecture and some patterns, how a LD application might look like (see ~\cite{euclid:chap5} for details). In detail, they provide a three-tier architecture (see figure~\ref{euclid_architecture} and three architecture patterns.
 
 The architecture is very generic and consists of the classic three tiers: presentation, logic and data, each independent to the overlaying tier. Since the presentation and logic layer does not concern the actual publishing of the data, the data layer is the interesting one here. The layer consists of the \emph{Data Access Component}, which represents the access to different data types like relational data or other Web APIs and transforms the data to RDF, the \emph{Data Integration Component}, which does the vocabulary mapping and interlinking for the cleansing in order to e.g. identify and fix ambiguities in resource names, and finally the \emph{Triple Store}, holding the integrated dataset for exposing it to the web.
 
@@ -255,7 +255,7 @@ The framework provides an API to extract data from and write to RDF, supporting 
 More concrete, Jena can be used to manipulate RDF data, storing them in a triple store and publish it as a SPARQL access point. This HTTP interface is called \emph{Fuseki}, which is in fact a sub-project of Jena and can be also run as stand-alone server using the Jetty web server.
 
 \newpage
-\section{Excluded Tools and Projects}\label{excluded}
+\section{Excluded Tools And Projects}\label{excluded}
 
 \subsection{LD-Patterns}\index{Framework!LD-Patterns}
 The Linked Data Patterns book by Dodds and Davis (see~\cite{dodds2011linked}) tried to give an overview of existing design pattern regarding LD. But they don't give concrete architectures or architecture relating informations, so this paper will not use its content. But it is suggested, that this design pattern catalogue is used additionally when creating an application.
