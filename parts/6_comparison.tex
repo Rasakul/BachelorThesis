@@ -1,8 +1,15 @@
 \chapter{Comparison Of LD Solutions Based On The Evaluation Framework (RQ3)}\label{comparison}
 
-It this section the comparison itself will be done. In order to do that, first in section~\ref{comp_classification} the classification introduced in section~\ref{classification} will be applied to the found solution. Then in section~\ref{comparison} the criteria defined in section~\ref{criteria} will be applied for each of them, divided in the defined groups. The summary in section~\ref{comp_summary} will then give an overview of the done comparison. 
+It this section the comparison itself will be done. In order to do that, first in 
+section~\ref{comp_classification} the classification introduced in section~
+\ref{classification} will be applied to the found solution. Then in section~
+\ref{comparison} the criteria defined in section~\ref{criteria} will be applied 
+for each of them, divided in the defined groups. The summary in section~
+\ref{comp_summary} will then give an overview of the done comparison. 
 
-An overview of the solutions to compare can be seen as recap in table~\ref{tb:cmp_overview}, in order to simplify the following tables, each of the solutions is given an ID to refer.
+An overview of the solutions to compare can be seen as recap in table~
+\ref{tb:cmp_overview}, in order to simplify the following tables, each of the 
+solutions is given an ID to refer.
 
 \begin{table}[htbp]
 \centering
@@ -70,31 +77,56 @@ An overview of the solutions to compare can be seen as recap in table~\ref{tb:cm
 \end{table}
 
 \subsection*{1: Euclid Project} 
-Since the Euclid Project is very generic, the Data Freshness and Flexibility totally depends on how the concepts are implemented in an application. If the concepts are correctly implemented, Maintainability is probably well supported, since the three-layered architecture is widely recognized for it. For Data Freshness and Flexibility, the implementation needs to be done focused on it, in order to achieve it, since the project does it not explicitly.
+Since the Euclid Project is very generic, the Data Freshness and Flexibility 
+totally depends on how the concepts are implemented in an application. If the 
+concepts are correctly implemented, Maintainability is probably well supported, 
+since the three-layered architecture is widely recognized for it. For Data 
+Freshness and Flexibility, the implementation needs to be done focused on it, in 
+order to achieve it, since the project does it not explicitly.
 
 \subsection*{2: LUCERO}
-The project supports Data Freshness by its Updaters and Schedulers, and can react to ontology changes by its Entity Name System. But it is unclear, how well it supports Maintainability, further investigations are required, which exceed the scope of this thesis.
+The project supports Data Freshness by its Updaters and Schedulers, and can react 
+to ontology changes by its Entity Name System. But it is unclear, how well it 
+supports Maintainability, further investigations are required, which exceed the 
+scope of this thesis.
 
 \subsection*{3: Linked Data book}
-Similar to the Euclid Project, the Data Freshness and Flexibility is possible well supported, but depends on the implementation. It is also not an explicit focus. Maintainability again is inherit of the concept.
+Similar to the Euclid Project, the Data Freshness and Flexibility is possible well 
+supported, but depends on the implementation. It is also not an explicit focus. 
+Maintainability again is inherit of the concept.
 
 \subsection*{4: D2RQ Platform}
-The D2RQ Mapping Language can flexibly handle heterogeneous data as well as legacy data, the quality of Data Freshness depends on the configuration but is itself inherit of the concept.
+The D2RQ Mapping Language can flexibly handle heterogeneous data as well as legacy 
+data, the quality of Data Freshness depends on the configuration but is itself 
+inherit of the concept.
 
 \subsection*{5: Information Workbench}
-Since the Workbench is designed to easily integrate different data sources, it can handle legacy data and ontology changes relatively good, depending on custom configurations. It might be a challenge to find the correct configurations, but the provided documentation is well done.
+Since the Workbench is designed to easily integrate different data sources, it can 
+handle legacy data and ontology changes relatively good, depending on custom 
+configurations. It might be a challenge to find the correct configurations, but 
+the provided documentation is well done.
 
 \subsection*{6: LDIF}
-LDIF is explicit designed to handle various data sources and vocabularies, mapping them to an uniform vocabulary. The framework further provides scheduler to keep the data as fresh as needed (running hourly, daily etc.)
+LDIF is explicit designed to handle various data sources and vocabularies, mapping 
+them to an uniform vocabulary. The framework further provides scheduler to keep 
+the data as fresh as needed (running hourly, daily etc.)
 
 \subsection*{7: Eclipse RDF4J}
-All three criteria are highly depending on the implementation of the framework and therefore how maintainability, freshness and flexibility are handled. The framework itself does only interact with a repository (read/write), which can potential be filled by another application which handles freshness and flexibility. Maintainability could be a bit tricky in this situation, if the other application is out of control of the RDF4J implementation.
+All three criteria are highly depending on the implementation of the framework and 
+therefore how maintainability, freshness and flexibility are handled. The 
+framework itself does only interact with a repository (read/write), which can 
+potential be filled by another application which handles freshness and 
+flexibility. Maintainability could be a bit tricky in this situation, if the other 
+application is out of control of the RDF4J implementation.
 
 \subsection*{8: Apache Jena}
 Jena is very similar to RDF4J, all statements there are valid for Jena too.
 
 \subsection{Summary Group 1}
-Most of the solutions are supporting all data freshness and flexibility although most of them depending on the concrete implementation or configuration of the application. Only LDIF have a clear support of especially data freshness and flexibility. Maintainability is a critical point for most of the solutions.
+Most of the solutions are supporting all data freshness and flexibility although 
+most of them depending on the concrete implementation or configuration of the 
+application. Only LDIF have a clear support of especially data freshness and 
+flexibility. Maintainability is a critical point for most of the solutions.
 
 \section{Criteria Group 2: Usability}
 
@@ -120,31 +152,52 @@ Most of the solutions are supporting all data freshness and flexibility although
 \end{table}
 
 \subsection*{1: Euclid Project}
-Since the Usability totally depends on the implemented application, no general statements can be given here. Security is not explicit. The documentation is very good.
+Since the Usability totally depends on the implemented application, no general 
+statements can be given here. Security is not explicit. The documentation is very 
+good.
 
 \subsection*{2: LUCERO}
-The project does not support an explicit UI, therefore Usability is hard to evaluate. It also does not have any integrated security. The documentation is old and possible outdated, therefore learnability of the system is relatively bad.
+The project does not support an explicit UI, therefore Usability is hard to 
+evaluate. It also does not have any integrated security. The documentation is old 
+and possible outdated, therefore learnability of the system is relatively bad.
 
 \subsection*{3: Linked Data book}
-Again, similar to Euclid, the Usability strongly depends on the implementation and is therefore not applicable. Security is not explicit.
+Again, similar to Euclid, the Usability strongly depends on the implementation and 
+is therefore not applicable. Security is not explicit.
 
 \subsection*{4: D2RQ Platform}
-The D2RQ server provides a basic but good readable UI. The documentation of the whole platform is very good. Security is not part of the project.
+The D2RQ server provides a basic but good readable UI. The documentation of the 
+whole platform is very good. Security is not part of the project.
 
 \subsection*{5: Information Workbench}
-The workbench has a very well designed UI, supporting the user to achieve their tasks relatively simple. The system is very good readable, enabling the user to explore the functionality and fulfilling their task. The according documentation is well done for "standard" users, but might be not enough for advanced development. Security is per default activated.
+The workbench has a very well designed UI, supporting the user to achieve their 
+tasks relatively simple. The system is very good readable, enabling the user to 
+explore the functionality and fulfilling their task. The according documentation 
+is well done for "standard" users, but might be not enough for advanced 
+development. Security is per default activated.
 
 \subsection*{6: LDIF}
-LDIF does not have an explicit UI, therefore there can be no assessment of it done. Security is not part of the LDIF concept. The documentation is well done, but covers only simple topics, which could be problematic when running into problems while using the framework.
+LDIF does not have an explicit UI, therefore there can be no assessment of it 
+done. Security is not part of the LDIF concept. The documentation is well done, 
+but covers only simple topics, which could be problematic when running into 
+problems while using the framework.
 
 \subsection*{7: Eclipse RDF4J}
-The framework provides a simple UI for the RDF4J server and workbench for managing the repositories, but using RDF4 means writing Java Code. Therefore UI can not be topic of examination here. The RDF4J repositories have simple user management, but are handled per default by plain text cookies in the browser. The documentation is detailed and in good condition.
+The framework provides a simple UI for the RDF4J server and workbench for managing 
+the repositories, but using RDF4 means writing Java Code. Therefore UI can not be 
+topic of examination here. The RDF4J repositories have simple user management, but 
+are handled per default by plain text cookies in the browser. The documentation is 
+detailed and in good condition.
 
 \subsection*{8: Apache Jena}
-Again, all statements from RDF4J are valid for Jena too. But in contrast to RDF4J Jena uses Apache Shiro for security. The server for Jena is called Fuseki.
+Again, all statements from RDF4J are valid for Jena too. But in contrast to RDF4J 
+Jena uses Apache Shiro for security. The server for Jena is called Fuseki.
 
 \subsection{Summary Group 2}
-Most of the solutions does not support an UI, except D2RQ and the information workbench. Security is only explicit mentioned in the information workbench and Apache Jena, RDF4J's default security is very basic. All solutions except LUCERO provide a good documentation.
+Most of the solutions does not support an UI, except D2RQ and the information 
+workbench. Security is only explicit mentioned in the information workbench and 
+Apache Jena, RDF4J's default security is very basic. All solutions except LUCERO 
+provide a good documentation.
 
 \section{Criteria Group 3: Data Formats}
 
@@ -170,31 +223,47 @@ Most of the solutions does not support an UI, except D2RQ and the information wo
 \end{table}
 
 \subsection*{1: Euclid Project}
-The Euclid Project does theoretically supports every kind of formats, since it requires the developer to write a consumer for each data source, additionally enhanced by a wrapper to transform the data to RDF.
+The Euclid Project does theoretically supports every kind of formats, since it 
+requires the developer to write a consumer for each data source, additionally 
+enhanced by a wrapper to transform the data to RDF.
 
 \subsection*{2: LUCERO}
-Per default, the project supports only RSS and XML, but it provides also mechanism to integrate additional data extractors to the system, to enable addition data formats.
+Per default, the project supports only RSS and XML, but it provides also mechanism 
+to integrate additional data extractors to the system, to enable addition data 
+formats.
 
 \subsection*{3: Linked Data book}
-The book provides recipes for RDF, XML, HTML, relational databases and wrapper for existing applications and Web APIs. Additional data formats can probably integrated by adopting the recipes.
+The book provides recipes for RDF, XML, HTML, relational databases and wrapper for 
+existing applications and Web APIs. Additional data formats can probably 
+integrated by adopting the recipes.
 
 \subsection*{4: D2RQ Platform}
 The scope of the platform are only the integration of relational databases.
 
 \subsection*{5: Information Workbench}
-The workbench does support a wide range of data format. For each data source, a data provider has to be configured. For table- and tree-based data formats are mappings available to transform the data to RDF.
+The workbench does support a wide range of data format. For each data source, a 
+data provider has to be configured. For table- and tree-based data formats are 
+mappings available to transform the data to RDF.
 
 \subsection*{6: LDIF}
-LDIF provides four types of import jobs: Quad (import N-Quads dumps), Triple (import RDF/XML, N-Triples or Turtle dumps), Crawl (import by dereferencing URIs as RDF data, using the LDSpider Web Crawling Framework) and SPARQL Import Job (import by querying a SPARQL endpoint)
+LDIF provides four types of import jobs: Quad (import N-Quads dumps), Triple 
+(import RDF/XML, N-Triples or Turtle dumps), Crawl (import by dereferencing URIs 
+as RDF data, using the LDSpider Web Crawling Framework) and SPARQL Import Job 
+(import by querying a SPARQL endpoint)
 
 \subsection*{7: Eclipse RDF4J}
-The framework is mainly meant for working with data from a RDF repository and not explicit for putting/creating data in it in the first place. 
+The framework is mainly meant for working with data from a RDF repository and not 
+explicit for putting/creating data in it in the first place. 
 
 \subsection*{8: Apache Jena}
-Jena is also developed with the focus of accessing data rather than creating the data store, therefore only RDF and additionally OWL are supported.
+Jena is also developed with the focus of accessing data rather than creating the 
+data store, therefore only RDF and additionally OWL are supported.
 
 \subsection{Summary Group 3}
-The solutions offer a wide range of data types in total, the Euclid Project and the LD book provide recipes for various data types, the Information Workbench does this out-of-the-box. D2RQ, RDF4J and Jena are specialized solutions, focusing only on single data types.
+The solutions offer a wide range of data types in total, the Euclid Project and 
+the LD book provide recipes for various data types, the Information Workbench does 
+this out-of-the-box. D2RQ, RDF4J and Jena are specialized solutions, focusing only 
+on single data types.
 
 \section{Criteria Group 4: Linked Data Publishing Checklist}
 
@@ -220,61 +289,122 @@ Q8: Do you refer to additional access methods?                     & x          
 \end{table}
 
 \subsection*{1: Euclid Project}
-Since of its generic nature, possible every point of the checklist can be fulfilled depending on the implementation. But the architecture does not require any of the points.
+Since of its generic nature, possible every point of the checklist can be 
+fulfilled depending on the implementation. But the architecture does not require 
+any of the points.
 
 \subsection*{2: LUCERO}
-LUCERO supports interlinking of data and through its Entity Name System different vocabularies. Since its bad documentation, it is unclear, if any metadata are provided (assumable not).
+LUCERO supports interlinking of data and through its Entity Name System different 
+vocabularies. Since its bad documentation, it is unclear, if any metadata are 
+provided (assumable not).
 
 \subsection*{3: Linked Data book}
-Since Heath et al. propose the checklist in this book, it is also implicit and explicit integrated into the described solutions.
+Since Heath et al. propose the checklist in this book, it is also implicit and 
+explicit integrated into the described solutions.
 
 \subsection*{4: D2RQ Platform}
-The D2RQ server provides comprehensive support for metadata, easy customizable by templates. The D2RQ Mapping language is very powerful in handling and mapping various kinds of vocabulary.
+The D2RQ server provides comprehensive support for metadata, easy customizable by 
+templates. The D2RQ Mapping language is very powerful in handling and mapping 
+various kinds of vocabulary.
 
 \subsection*{5: Information Workbench}
-The workbench does support metadata, licensing metadata can be provided by custom implementations. Interlinking is as well supported as different kinds of vocabularies.
+The workbench does support metadata, licensing metadata can be provided by custom 
+implementations. Interlinking is as well supported as different kinds of 
+vocabularies.
 
 \subsection*{6: LDIF}
-The framework implicit provides provenance next to the triple store, links to other data sets and maps proprietary vocabulary terms. The LD book explicit mentions LDIF as good example, therefore it can easily be assumed, that the checklist is fulfilled.
+The framework implicit provides provenance next to the triple store, links to 
+other data sets and maps proprietary vocabulary terms. The LD book explicit 
+mentions LDIF as good example, therefore it can easily be assumed, that the 
+checklist is fulfilled.
 
 \subsection*{7: Eclipse RDF4J}
-Again, same as the Euclid Project, nearly every point of the checklist could be fulfilled by an implementation, especially the points about meta data. The schema/vocabulary/structure can be independent of the application and managed by another one, therefore it is out of the scope of RDF4J.
+Again, same as the Euclid Project, nearly every point of the checklist could be 
+fulfilled by an implementation, especially the points about meta data. The schema/
+vocabulary/structure can be independent of the application and managed by another 
+one, therefore it is out of the scope of RDF4J.
 
 \subsection*{8: Apache Jena}
-For Jena are the same arguments than for RDF4J valid: meta data are depended on the implementation, schema/vocabulary/structure can be out of the scope.
+For Jena are the same arguments than for RDF4J valid: meta data are depended on 
+the implementation, schema/vocabulary/structure can be out of the scope.
 
 \subsection{Summary Group 4}
-The checklist is overall well supported although it, again, is depending on the implementation of some of the solutions like Euclid, RDF4J or Jena. The last two are not managing the schema/vocabulary/structure by themselves, therefore the checklist is only partially applicable.
+The checklist is overall well supported although it, again, is depending on the 
+implementation of some of the solutions like Euclid, RDF4J or Jena. The last two 
+are not managing the schema/vocabulary/structure by themselves, therefore the 
+checklist is only partially applicable.
 
 \section{Summary}\label{comp_summary}
 
-Overall the concept of having multiple criteria worked, since some solution could not be evaluated in some categories like Usability. But in the overall view, the criteria helped to find a standardized way to describe the solutions and compare them. In the following section, the evaluation of each solution will be summarized to have a better overview.
+Overall the concept of having multiple criteria worked, since some solution could 
+not be evaluated in some categories like Usability. But in the overall view, the 
+criteria helped to find a standardized way to describe the solutions and compare 
+them. In the following section, the evaluation of each solution will be summarized 
+to have a better overview.
 
 \subsection*{1: Euclid Project}
-Since the Euclid Project does only provide a generic architecture, most of the criteria are not directly applicable and are depending on the concrete implementation. Correctly applied it does however supports directly or indirectly maintainability, data freshness, flexibility, various kinds of data formats and the complete LD checklist. The architecture has no focus, neither explicit nor implicit, on security, therefore it needs to be done additionally if required. The documentation of the architecture is outstanding and very well done.
-Comparing to the other solutions, Euclid provides structures how other solutions or custom implementation can interact with each other. It can also be used as blueprint when combining other solutions.
+Since the Euclid Project does only provide a generic architecture, most of the 
+criteria are not directly applicable and are depending on the concrete 
+implementation. Correctly applied it does however supports directly or indirectly 
+maintainability, data freshness, flexibility, various kinds of data formats and 
+the complete LD checklist. The architecture has no focus, neither explicit nor 
+implicit, on security, therefore it needs to be done additionally if required. The 
+documentation of the architecture is outstanding and very well done.
+Comparing to the other solutions, Euclid provides structures how other solutions 
+or custom implementation can interact with each other. It can also be used as 
+blueprint when combining other solutions.
 
 \subsection*{2: LUCERO}
-LUCERO is on one hand overall bad documented and outdated. On the other hand, it does support data freshness and flexibility per default due its mechanisms and can support various data formats by custom extractors. But due the first facts, it is not recommended any more to use LUCERO in a real application.
+LUCERO is on one hand overall bad documented and outdated. On the other hand, it 
+does support data freshness and flexibility per default due its mechanisms and can 
+support various data formats by custom extractors. But due the first facts, it is 
+not recommended any more to use LUCERO in a real application.
 
 \subsection*{3: Linked Data book}
-The summary for the LD book architecture is similar structured to the one of the Euclid project: good documentation but overall very generic. It can support maintainability, data freshness and flexibility if well implemented. The documentation is good and does include various recipes of data formats.
-A possible use case for it is the same as for Euclid: as blue print for combining other solutions.
+The summary for the LD book architecture is similar structured to the one of the 
+Euclid project: good documentation but overall very generic. It can support 
+maintainability, data freshness and flexibility if well implemented. The 
+documentation is good and does include various recipes of data formats.
+A possible use case for it is the same as for Euclid: as blue print for combining 
+other solutions.
 
 \subsection*{4: D2RQ Platform}
-The D2RQ is as mentioned a specialized tool for relational databases. According to it, it has only limited data format supports. But due its simple structure and focused usage, data freshness, maintainability and flexibility can be assured. D2RQ includes a good UI and documentation.
-This solution is ideal for a very specific use case, requiring only a relational database to publish as L(O)D, but solving it as an all-in-one solution without the need of further tool integration.
+The D2RQ is as mentioned a specialized tool for relational databases. According to 
+it, it has only limited data format supports. But due its simple structure and 
+focused usage, data freshness, maintainability and flexibility can be assured. 
+D2RQ includes a good UI and documentation.
+This solution is ideal for a very specific use case, requiring only a relational 
+database to publish as L(O)D, but solving it as an all-in-one solution without the 
+need of further tool integration.
 
 \subsection*{5: Information Workbench}
-The Information Workbench is an all-in-one solution, rich with functionality and with a wide range of supported data formats. It can be used as a full stack solution with UI, integrating different data repositories. The documentation is well done but simple written, resulting maybe into problems handling more complex problems.
-The Workbench is ideal for an use case involving multiple data sources. For smaller use cases, it could be an overloaded solution.
+The Information Workbench is an all-in-one solution, rich with functionality and 
+with a wide range of supported data formats. It can be used as a full stack 
+solution with UI, integrating different data repositories. The documentation is 
+well done but simple written, resulting maybe into problems handling more complex 
+problems.
+The Workbench is ideal for an use case involving multiple data sources. For 
+smaller use cases, it could be an overloaded solution.
 
 \subsection*{6: LDIF}
-LDIF is due its concept on the one side a very flexible framework for handling different data sources with a wide range of vocabulary which also provides mechanism for keeping the retrieved data fresh. On the other hand the specialization leads to a specific focus resulting in a limit number of supported data formats.
-An use case for LDIF can be managing different data sources on base of RDF, SPARQL or something similar. Since it is not an all-in-one solution, it can/should be used in combination with another tool responsible for exposing the data to the web.
+LDIF is due its concept on the one side a very flexible framework for handling 
+different data sources with a wide range of vocabulary which also provides 
+mechanism for keeping the retrieved data fresh. On the other hand the 
+specialization leads to a specific focus resulting in a limit number of supported 
+data formats.
+An use case for LDIF can be managing different data sources on base of RDF, SPARQL 
+or something similar. Since it is not an all-in-one solution, it can/should be 
+used in combination with another tool responsible for exposing the data to the 
+web.
 
 \subsection*{7: Eclipse RDF4J}
-RDF4J is completely different to the other investigated solutions, since it is a Java framework, requiring the developer to implement the given APIs. It is designed to handle a given repository and work with its data and/or expose them to the web. If an use case requires to publish data \emph{not} in RDF format, it could be good idea to use RDF4J in combination with a tool like LDIF.
+RDF4J is completely different to the other investigated solutions, since it is a 
+Java framework, requiring the developer to implement the given APIs. It is 
+designed to handle a given repository and work with its data and/or expose them to 
+the web. If an use case requires to publish data \emph{not} in RDF format, it 
+could be good idea to use RDF4J in combination with a tool like LDIF.
 
 \subsection*{8: Apache Jena}
-As already mentioned Jena is similar to Sesame, but with the addition, that it provides support for OWL. It is also designed to handle a given repository and might be used in combination with something like LDIF.
+As already mentioned Jena is similar to Sesame, but with the addition, that it 
+provides support for OWL. It is also designed to handle a given repository and 
+might be used in combination with something like LDIF.
