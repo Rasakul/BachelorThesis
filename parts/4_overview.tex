@@ -1,8 +1,8 @@
 \chapter{Overview Of LD Solutions (RQ1)}\label{overview}
-In order to compare solutions an understanding of existing solutions is necessary. This section will look at existing solutions, what kind of solutions they are, which of them can be used for this paper and which must be excluded. Furthermore, this section aims to understand how solutions look like and will examine the architecture of them.
+In order to compare solutions an understanding of existing solutions is necessary. This section will look at existing solutions, what kind of solutions they are, which of them can be used for this thesis and which must be excluded. Furthermore, this section aims to understand how solutions look like and will examine the architecture of them.
 
 \section{Architectures Of Frameworks}\label{arch_frameworks}
-In this subsection the paper will look into three proposed models how solutions (and/or implemented LD-applications) should look like. There are many other existing architectures and ongoing projects exposing data as Linked (Open) Data, this paper will use the following as representation of them.
+In this subsection the thesis will look into three proposed models how solutions (and/or implemented LD-applications) should look like. There are many other existing architectures and ongoing projects exposing data as Linked (Open) Data, this thesis will use the following as representation of them.
 
 \newacronym{euclid}{EUCLID}{EdUcational Curriculum for the usage of Linked Data}
 \subsection{Euclid Project}\index{Architectures!Euclid Project}
@@ -19,7 +19,7 @@ In this subsection the paper will look into three proposed models how solutions 
 	\label{euclid_architecture}
 \end{figure}
 
-The EUCLID project~\footnote{~\cite{euclid:home}} (EdUcational Curriculum for the usage of Linked Data) was founded under the \emph{Seventh Framework Programme of Research and Technological Development}, a funding program of the European Union/European Commission for 2007-2013~\footnote{~\cite{eu:fp7}}\footnote{ EUCLID in the CORDIS database: \url{http://cordis.europa.eu/project/rcn/103709_en.html}}.
+The EUCLID project~\footnote{~\cite{euclid:home}} (EdUcational Curriculum for the usage of Linked Data) was founded under the \emph{Seventh Framework Program of Research and Technological Development}, a funding program of the European Union/European Commission for 2007-2013~\footnote{~\cite{eu:fp7}}\footnote{ EUCLID in the CORDIS database: \url{http://cordis.europa.eu/project/rcn/103709_en.html}}.
 
 Aim of the project was (and still is) to gather existing knowledge and expertise of \emph{"researchers, technology enthusiasts and early adopters in various European Member States"} and provide that accumulated as educational resources to enable the  full benefit of L(O)D for European businesses. The project built upon a consortium experienced in \emph{"over 20 LD projects with over 40 companies and public offices in more than 10 countries"}~\cite{euclid:about}
 
@@ -47,7 +47,7 @@ The outcome of this project is a a range of learning materials, fragmented into 
 	
 \end{enumerate}
 
-For this paper module 3 and 5~\footnote{~\cite{euclid:chap5}} are the most interesting. Module 3 describes some useful technologies for various steps on the way of exposing LD, but module 5 introduce a high level architecture and some patterns, how a LD application might look like (see ~\cite{euclid:chap5} for details). In detail, they provide a three-tier architecture (see figure~\ref{euclid_architecture} and three architecture patterns.
+For this thesis module 3 and 5~\footnote{~\cite{euclid:chap5}} are the most interesting. Module 3 describes some useful technologies for various steps on the way of exposing LD, but module 5 introduce a high level architecture and some patterns, how a LD application might look like (see ~\cite{euclid:chap5} for details). In detail, they provide a three-tier architecture (see figure~\ref{euclid_architecture} and three architecture patterns.
 
 The architecture is very generic and consists of the classic three tiers: presentation, logic and data, each independent to the overlaying tier. Since the presentation and logic layer does not concern the actual publishing of the data, the data layer is the interesting one here. The layer consists of the \emph{Data Access Component}, which represents the access to different data types like relational data or other Web APIs and transforms the data to RDF, the \emph{Data Integration Component}, which does the vocabulary mapping and interlinking for the cleansing in order to e.g. identify and fix ambiguities in resource names, and finally the \emph{Triple Store}, holding the integrated dataset for exposing it to the web.
 
@@ -80,7 +80,7 @@ Describing the use of complex queries on a fix set of data sources, enabling to 
 	\label{lucero_architecture}
 \end{figure}
 
-The LUCERO project ("Linking University Content for Education and Research Online")~\footnote{The code is available in the Google Code Archive: \url{https://code.google.com/archive/p/luceroproject/wikis/StepByStepDocumentation.wiki}} was a project at the Open University, aiming to \emph{"scope, prototype, pilot and evaluate reusable, cost-effective solutions relying on the linked dataprinciples and technologies for exposing and connecting educational and research content"}. It was founded for one year by the JISC Information Environment 2011 Programme under the call Deposit of research outputs and Exposing digital content for education and research.~\cite{lucero:about}
+The LUCERO project ("Linking University Content for Education and Research Online")~\footnote{The code is available in the Google Code Archive: \url{https://code.google.com/archive/p/luceroproject/wikis/StepByStepDocumentation.wiki}} was a project at the Open University, aiming to \emph{"scope, prototype, pilot and evaluate reusable, cost-effective solutions relying on the linked dataprinciples and technologies for exposing and connecting educational and research content"}. It was founded for one year by the JISC Information Environment 2011 Program under the call Deposit of research outputs and Exposing digital content for education and research.~\cite{lucero:about}
 
 The projects connected with other organizations through LinkedUniversities.org~\footnote{\url{http://linkeduniversities.org/}} to gather common issues and practices. The outcome was the first university linked data platform,~\url{http://data.open.ac.uk/}, with a lot of impact on The Open University and the education community.
 
@@ -96,7 +96,7 @@ One of the outcomes next to the LOD application itself was the Tabloid ("Toolkit
 \begin{figure}[htbp]
 	\centering
 \includegraphics[width=\textwidth]{img/ld_architecture.png}
-	\caption{Linked Data Publishing Options and Workflows according to the LD book}
+	\caption{Linked Data Publishing Options and Workflow according to the LD book}
 	\label{ld_architecture}
 \end{figure}
 
@@ -143,7 +143,7 @@ Part of the platform is the D2R Server~\footnote{\url{http://d2rq.org/d2r-server
 
 The server uses the mentioned \textbf{On-The-Fly Dereferencing Pattern} and does not provide a triple store, therefore it may be not has as good performance than tools with a triple store, although the team made a great effort to improve it.
 
-Part of the server is also a tool which generates automatically a corresponding mapping and RDF vocabulary for an existing table structure, using table names as class names and column names as property names. The generated mapping file can then be customised.~\cite{bizer2006d2r}
+Part of the server is also a tool which generates automatically a corresponding mapping and RDF vocabulary for an existing table structure, using table names as class names and column names as property names. The generated mapping file can then be customized.~\cite{bizer2006d2r}
 
 The following applications are examples using D2R-Server:
 
@@ -163,7 +163,7 @@ The following applications are examples using D2R-Server:
 	\label{iw_architecture}
 \end{figure}
 
-The Information Workbench~\footnote{\url{https://www.fluidops.com/en/products/information_workbench/}} is a high customisable tool to support the building of Linked Data applications, from basic data integration up to rich UI and visualisations. The tool is developed by fluidOps and is published as Community Edition free available and under an Open Source License with a limited selection of capablities and only for non-productive use (educational use, testing, development). The enterprise edition is also available but not for free.
+The Information Workbench~\footnote{\url{https://www.fluidops.com/en/products/information_workbench/}} is a high customizable tool to support the building of Linked Data applications, from basic data integration up to rich UI and visualization. The tool is developed by fluidOps and is published as Community Edition free available and under an Open Source License with a limited selection of capabilities and only for non-productive use (educational use, testing, development). The enterprise edition is also available but not for free.
 
 \newpage
 
@@ -172,21 +172,21 @@ The workbench consists of four layers (see figure~\ref{iw_architecture} for an o
 \begin{itemize}
 
 \item \textbf{Persistence}
-Using so-called \emph{providers}, the layers offer capabilities to integrate and convert data from different data source and stores them in a central triple store. Alternatively it also supports virtualised integration of local and public Linked Data sources using a \emph{federation layer}.
+Using so-called \emph{providers}, the layers offer capabilities to integrate and convert data from different data source and stores them in a central triple store. Alternatively it also supports virtualized integration of local and public Linked Data sources using a \emph{federation layer}.
 
 \item \textbf{Platform}
 On top of the persistence layer the core Platform layer a selection of modules and functionalities covering generic needs of Linked Data applications, the most important are a \emph{Semantic Wiki \& Widget Engin}e, an \emph{User Management \& Access Control}, a \emph{Search \& Analytics Engine} and a \emph{Workflow Engine}.
 
-\item \textbf{SDK} To support customised applications the workbench provides a SDK (Solution Development Kit) for developers to build domain specific applications, including \emph{extensible data providers}, \emph{data management facilities}, modified \emph{ontologies}, \emph{templates}, \emph{widgets} and different APIs for extensive \emph{system configuration}, \emph{rules} and \emph{workflows}.
+\item \textbf{SDK} To support customized applications the workbench provides a SDK (Solution Development Kit) for developers to build domain specific applications, including \emph{extensible data providers}, \emph{data management facilities}, modified \emph{ontologies}, \emph{templates}, \emph{widgets} and different APIs for extensive \emph{system configuration}, \emph{rules} and \emph{workflow}.
 
 \item \textbf{Solution}
 On top of all layer stands the final solution, the application itself, which is either directly deployed through a RESTful API or over a zipped file for other installation approaches.
 
 \end{itemize}
 
-The resulting application is again customisable by widgets and different views, enabling data exploration and visualisation.
+The resulting application is again customizable by widgets and different views, enabling data exploration and visualization.
 
-\subsection{LDIF – Linked Data Integration Framework}\index{Framework!LDIF}\newacronym{ldif}{LDIF}{Linked Data Integration Framework}
+\subsection{LDIF  Linked Data Integration Framework}\index{Framework!LDIF}\newacronym{ldif}{LDIF}{Linked Data Integration Framework}
 
 \begin{figure}[htbp]
 	\centering
@@ -258,17 +258,17 @@ More concrete, Jena can be used to manipulate RDF data, storing them in a triple
 \section{Excluded Tools And Projects}\label{excluded}
 
 \subsection{LD-Patterns}\index{Framework!LD-Patterns}
-The Linked Data Patterns book by Dodds and Davis (see~\cite{dodds2011linked}) tried to give an overview of existing design pattern regarding LD. But they don't give concrete architectures or architecture relating informations, so this paper will not use its content. But it is suggested, that this design pattern catalogue is used additionally when creating an application.
+The Linked Data Patterns book by Dodds and Davis (see~\cite{dodds2011linked}) tried to give an overview of existing design pattern regarding LD. But they don't give concrete architectures or architecture relating information, so this thesis will not use its content. But it is suggested, that this design pattern catalogue is used additionally when creating an application.
 
 \subsection{LOD2 Stack}\index{Tools!LOD2 Stack}
 
-The LOD2 stack, introduced by Auer et. al., is \emph{is an integrated distribution of aligned tools which support the whole life cycle of Linked Data from extraction, authoring/creation via enrichment, interlinking, fusing to maintenance.}~\cite{auer2012managing} For this paper the proposed stack of technology was too generic to compare it with other frameworks and the website of the project~\footnote{\url{http://stack.linkeddata.org/lod2//}} was at point of writing this paper offline, therefore it was excluded of this paper.
+The LOD2 stack, introduced by Auer et. al., is \emph{is an integrated distribution of aligned tools which support the whole life cycle of Linked Data from extraction, authoring/creation via enrichment, interlinking, fusing to maintenance.}~\cite{auer2012managing} For this thesis the proposed stack of technology was too generic to compare it with other frameworks and the website of the project~\footnote{\url{http://stack.linkeddata.org/lod2//}} was at point of writing this thesis offline, therefore it was excluded of this thesis.
 
 \subsection{LODUM}\index{Other LOD Projects!LODUM}
 
 Another interesting project is the LODUM project (Linked Open Data University of Münster), the Open Data initiative of the university, hosted at the Institute for Geoinformatics' Semantic Interoperability Lab (MUSIL). The project team has co-initiated both LinkedUniversities.org and LinkedScience.org.
 
-It was excluded for this paper because the project don't provide public documentation of their architecture or any other part of their technical details
+It was excluded for this thesis because the project don't provide public documentation of their architecture or any other part of their technical details
 \url{http://lodum.de/}
 
 \subsection{Synth and SHDM}\index{Framework!Synth}
@@ -280,6 +280,6 @@ It was excluded for this paper because the project don't provide public document
 	\label{synth_concept}
 \end{figure}
 
-Synth~\footnote{\url{http://www.tecweb.inf.puc-rio.br/synth}} is a development environment for building SHDM~\footnote{\url{https://www.w3.org/2005/Incubator/model-based-ui/wiki/SHDM_-_Semantic_Hypermedia_Design_Method}} (Semantic Hypermedia Design Method) modelled applications, providing a set of modules, receiving SHDM generated models. Synth comes with a web browser GUI for adding and editing these models. A conceptual view of the architecture can be seen in figure~\ref{synth_concept}, where the dashed boxes are modules and the whites boxes insides the module components.~\cite{desynth} The authors de Souza Bomfim and Schwabe describe in two papers, how a Linked Data application can be build with the environment: ~\cite{desynth} and~\cite{de2011design}.
+Synth~\footnote{\url{http://www.tecweb.inf.puc-rio.br/synth}} is a development environment for building SHDM~\footnote{\url{https://www.w3.org/2005/Incubator/model-based-ui/wiki/SHDM_-_Semantic_Hypermedia_Design_Method}} (Semantic Hypermedia Design Method) modeled applications, providing a set of modules, receiving SHDM generated models. Synth comes with a web browser GUI for adding and editing these models. A conceptual view of the architecture can be seen in figure~\ref{synth_concept}, where the dashed boxes are modules and the whites boxes insides the module components.~\cite{desynth} The authors de Souza Bomfim and Schwabe describe in two papers, how a Linked Data application can be build with the environment: ~\cite{desynth} and~\cite{de2011design}.
 
-Since their description is very abstract and there are no further documentations of the tool, it was excluded for this paper. 
+Since their description is very abstract and there are no further documentations of the tool, it was excluded for this thesis. 

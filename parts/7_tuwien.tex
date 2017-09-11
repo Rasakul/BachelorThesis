@@ -1,6 +1,6 @@
 \chapter{A Case Study Of Applying The Evaluation Framework At TU Wien (RQ4)}\label{ch:tuwien}
 
-In this section, the paper tries to answer research question 4: What a LD solution for TU Wien might look like.
+In this section, the thesis tries to answer research question 4: What a LD solution for TU Wien might look like.
 
 \section{General Considerations}
 In order to answer the question, it is important to give a context, since it is difficult respectively impossible to give a general, generic solution. In the following sections, three possible scenarios will be proposed, which can be a possible use case at TU Wien. For each scenario the requirement will be defined and a solution assigned.
@@ -24,7 +24,7 @@ These requirements are therefore valid for each following scenario, meaning that
 
 \section{Situations \& Requirements}
 
-As mentioned, to answer the research question, the context needs to be specified. This will be done by analysing the stakeholders (already done by the previous study). These findings will then be combined to scenarios.
+As mentioned, to answer the research question, the context needs to be specified. This will be done by analyzing the stakeholders (already done by the previous study). These findings will then be combined to scenarios.
 
 \subsection{Stakeholders}
 
@@ -39,7 +39,7 @@ inhibition threshold is higher than for the researcher since the technical exper
 
 In the following sections will describe possible scenarios at TU Wien, how and which data are going to be published. There are two base scenarios: publishing a single data source and building a platform with various data sources. The second one will be additional split.
 
-\subsubsection{Situation 1: Specialised Single Solution}
+\subsubsection{Situation 1: Specialized Single Solution}
 
 Only one or a small number of data source(s) needs to be published. The application has to be specific done for this data set. The project is small scaled and can be done quickly. A possible data source could be the publication database. This scenario can be used as a demonstration, how to \emph{consume} Linked Open Data, but it is not advisable to use this approach if any other data source might be published in the future, since this scenario is \emph{not} scalable
 
@@ -48,7 +48,7 @@ Only one or a small number of data source(s) needs to be published. The applicat
 \itemsep0pt
 \item small scale
 \item small number of data sets
-\item specialised solution
+\item specialized solution
 \item simple
 \end{itemize}
 
@@ -81,13 +81,13 @@ Similar to scenario 2, it is necessary to build platform combining different kin
 
 \section{Proposed Solutions}
 
-\subsection{Scenario 1: Specialised Single Solution}
+\subsection{Scenario 1: Specialized Single Solution}
 
 There are two solution thinkable:
 
 \paragraph{Option 1: D2RQ} can be a solution for this situation. It provides a simple mapping of a given data set and a method of publishing with the D2R Server. The project can be fast implemented and be ready. Other data sets may be added. Since D2RQ only handles relational data, this approach is not suitable for semi-structured data.
 
-\paragraph{Option 2: A combination of Jena/RDF4J with Euclid and LDIF} can be used to publish he given data. The Euclid architecture (assuring maintainability) can be used as a blueprint to implement an application using either the Apache Jena or Eclipse RDF4J framework. If a mapping is needed, LDIF can be used additionally. This solution is far more extensive than using D2RQ, but on the other hand more flexible and customisable. The scope can be controlled by defining the limits, specially by economizing the UI, but be aware that this approach can result in an lesser usability and the scope might be too big for this situation.
+\paragraph{Option 2: A combination of Jena/RDF4J with Euclid and LDIF} can be used to publish he given data. The Euclid architecture (assuring maintainability) can be used as a blueprint to implement an application using either the Apache Jena or Eclipse RDF4J framework. If a mapping is needed, LDIF can be used additionally. This solution is far more extensive than using D2RQ, but on the other hand more flexible and customizable. The scope can be controlled by defining the limits, specially by economizing the UI, but be aware that this approach can result in an lesser usability and the scope might be too big for this situation.
 
 \subsection{Scenario 2: Function-rich Platform}
 
@@ -95,7 +95,7 @@ For this scenario is the \textbf{Information Workbench} suitable. The tool can i
 
 \subsection{Scenario 3: Complete Controlled Platform}
 
-For this scenario no all-in-one solution of the proposed tools is suitable, instead the platform has to be developed by using a framework like \textbf{Jena or RDF4J} in combination with the \textbf{Euclid Project architecture}, similar to the solution proposed situation 1. If a mapping to an unified vocabulary is needed, \textbf{LDIF} can also be used. This project will probably consume more time and will have a bigger scope than the solution of situation 2. But on the other hand, this approach offers more customisation options.
+For this scenario no all-in-one solution of the proposed tools is suitable, instead the platform has to be developed by using a framework like \textbf{Jena or RDF4J} in combination with the \textbf{Euclid Project architecture}, similar to the solution proposed situation 1. If a mapping to an unified vocabulary is needed, \textbf{LDIF} can also be used. This project will probably consume more time and will have a bigger scope than the solution of situation 2. But on the other hand, this approach offers more customization options.
 
 \section{Summary}
 
@@ -111,7 +111,7 @@ For this scenario no all-in-one solution of the proposed tools is suitable, inst
 		\begin{tabular}[c]{@{}l@{}}
 			-) small scale \\ 
 			-) small number of data sets \\ 
-			-) specialised solution \\ 
+			-) specialized solution \\ 
 			-) simple
 		\end{tabular} & 
 		\begin{tabular}[c]{@{}l@{}}
@@ -145,6 +145,6 @@ For this scenario no all-in-one solution of the proposed tools is suitable, inst
 \label{tu_scenarios_overview}
 \end{table}
 
-Taking a deeper look at the proposed situations and solutions, it can be seen, that it is most likely to use solutions like Jena or RDF4J in combination with a meta architecture like Euclid and utilization tools like LDIF. Tools like D2RQ are limiting and the Information Workbench needs a licensing. Looking at the popularity charts of sites like DB-Engines~\footnote{\url{https://db-engines.com/en/ranking_trend/system/Jena\%3BRDF4J}}, it currently seems like Jena is quite more popular.
+Taking a deeper look at the proposed situations and solutions, it can be seen, that it is most likely to use solutions like Jena or RDF4J in combination with a meta architecture like Euclid and utilization tools like LDIF. Tools like D2RQ are limiting and the Information Workbench needs a licensing. Looking at the popularity charts of sites like DB-Engines~\footnote{\url{https://db-engines.com/en/ranking_trend/system/Jena\;RDF4J}}, it currently seems like Jena is quite more popular.
 
 This proposed solution is of course not complete, there are similar tools to Jena and RDF4J, like MarkLogic~\footnote{\url{http://www.marklogic.com/}} or Virtuoso~\footnote{\url{https://virtuoso.openlinksw.com/}}. But it can be stated, that this \textit{kind} of solution is the most suitable of the proposed \textit{kinds} of solutions.
